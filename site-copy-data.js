@@ -168,7 +168,7 @@ window.GRIT_COPY = {
         "root": 0,
         "path": "div:nth-of-type(2) > p:nth-of-type(1)",
         "index": 0,
-        "value": "Our Expo is small but mighty. A place to luxuriate after a long afternoon of scavenging. A hub for knowledge distribution. A factory for cultural productions. Enjoy.",
+        "value": "Our expo is small but mighty. A place to luxuriate after a long afternoon of scavenging. A hub for knowledge distribution. A factory for cultural productions. Enjoy.",
         "label": "Our Expo is small but mighty. A place to luxuriate after a long afternoon of scavenging. A hub for k"
       },
       {
@@ -416,7 +416,7 @@ window.GRIT_COPY = {
         "root": 0,
         "path": "div:nth-of-type(2) > section:nth-of-type(1) > div:nth-of-type(1) > details:nth-of-type(4) > summary:nth-of-type(1) > h3:nth-of-type(1)",
         "index": 0,
-        "value": "",
+        "value": "TBA",
         "label": "Punk Truck Stop"
       },
       {
@@ -432,7 +432,7 @@ window.GRIT_COPY = {
         "root": 0,
         "path": "div:nth-of-type(2) > section:nth-of-type(1) > div:nth-of-type(1) > details:nth-of-type(4) > summary:nth-of-type(1) > span:nth-of-type(2) > span:nth-of-type(1) > mark:nth-of-type(1)",
         "index": 0,
-        "value": "",
+        "value": "TBA",
         "label": "10:00–5:00PM"
       },
       {
@@ -448,7 +448,7 @@ window.GRIT_COPY = {
         "root": 0,
         "path": "div:nth-of-type(2) > section:nth-of-type(1) > div:nth-of-type(1) > details:nth-of-type(4) > summary:nth-of-type(1) > span:nth-of-type(3) > span:nth-of-type(2)",
         "index": 0,
-        "value": "",
+        "value": "TBA",
         "label": "a local punk"
       },
       {
@@ -456,7 +456,7 @@ window.GRIT_COPY = {
         "root": 0,
         "path": "div:nth-of-type(2) > section:nth-of-type(1) > div:nth-of-type(1) > details:nth-of-type(4) > summary:nth-of-type(1) > a:nth-of-type(1)",
         "index": 0,
-        "value": "",
+        "value": "TBA",
         "label": "DROP IN"
       },
       {
@@ -472,7 +472,7 @@ window.GRIT_COPY = {
         "root": 0,
         "path": "div:nth-of-type(2) > section:nth-of-type(1) > div:nth-of-type(1) > details:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1)",
         "index": 0,
-        "value": "",
+        "value": "TBA",
         "label": "The punk truck stop is a load bearing piece of cultural and social infrastructure in Northwest Arkan"
       },
       {
