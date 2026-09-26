@@ -655,3 +655,28 @@ body[data-view] #page-content > .page-intro{background-color:#fafafa}
 body p{font-family:"Lucida Console",Monaco,monospace!important}
 
 body[data-view="raffle"] .section-head{margin-top:-21px}
+
+/* All raffle slides occupy the same frame, including the opening artwork. */
+.raffle-screen,.raffle-screen:has(.raffle-empty.is-art:not([hidden])){aspect-ratio:1.2;position:relative}
+.raffle-empty.is-art{position:absolute;inset:0}
+.raffle-frame>.raffle-purchase{margin:0 0 12px;padding:10px}
+.raffle-frame>.raffle-purchase h2{font-size:1.4rem;margin-bottom:6px}
+.raffle-frame>.raffle-purchase .raffle-purchase-body{padding:0}
+.raffle-frame>.raffle-purchase .raffle-buy{padding:10px;font-size:1.25rem}
+/* Fit the splash composition to the visible viewport, including landscape phones. */
+html:has(.welcome),body:has(.welcome){height:100%;margin:0;overflow:hidden}
+.paper.welcome{width:100%;max-width:none;height:100dvh;min-height:0;margin:0;overflow:hidden}
+.welcome .inner{position:relative;width:100%;max-width:none;height:100%;min-height:0;padding:0;display:block}
+.welcome:before{top:0;height:100%;max-height:none;background-size:cover;background-position:center}
+.welcome:after{display:none}
+.welcome-caption{position:absolute;top:3dvh;left:4vw;margin:0;max-width:90vw;font-size:min(2.6dvh,2rem);padding:.4em .6em}
+.welcome-caption-secondary{top:10dvh;left:12vw;margin:0;max-width:84vw}
+.welcome-enter{position:absolute;top:20dvh;left:58%;right:auto;width:25%;max-width:none;margin:0;transform:none;font-size:min(13dvh,15vw);line-height:1.04}
+.welcome-arrow{left:100%;top:40%;width:14vw;height:1.35em}
+.welcome-heading{position:absolute;top:auto;left:auto;right:4vw;bottom:3dvh;width:min(45vw,392px);height:17dvh;max-height:17dvh;margin:0;padding:0;transform:none;object-fit:contain}
+@media(max-width:600px){
+ .welcome-caption-secondary{left:38vw;max-width:58vw}
+ .welcome-enter{left:38%;width:36%;font-size:min(13dvh,23vw)}
+ .welcome-arrow{width:21vw}
+ .welcome-heading{right:4vw;width:92vw}
+}

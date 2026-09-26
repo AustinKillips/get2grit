@@ -39,7 +39,7 @@ function scheduleDescription(text){
  return linked(text);
 }
 function renderSchedule(){
- return window.GRIT_CONTENT.schedule.map(d=>`<details class="day" open><summary><h2 class="day-label">${escapeText(d.name.toLowerCase())}</h2><span class="day-arrow" aria-hidden="true"></span></summary><div class="day-body"><p class="day-date">${escapeText(d.date)}</p>${d.events.map(e=>event(escapeText(e.time),escapeText(e.title).replace(/^No-Drop Lake Leatherwood XC Ride departs$/i, title=>`<a href="https://ridewithgps.com/routes/56614525" target="_blank" rel="noopener">${title}</a>`).replace(/Dr\. J\.? Maniac/i, name=>`<a href="https://www.instagram.com/jasmanias_clubhouse/?hl=en" target="_blank" rel="noopener">${name}</a>`),scheduleDescription(e.description),escapeText(e.link||''))).join('')}</div></details>`).join('');
+ return window.GRIT_CONTENT.schedule.map(d=>`<details class="day"><summary><h2 class="day-label">${escapeText(d.name.toLowerCase())}</h2><span class="day-arrow" aria-hidden="true"></span></summary><div class="day-body"><p class="day-date">${escapeText(d.date)}</p>${d.events.map(e=>event(escapeText(e.time),escapeText(e.title).replace(/^No-Drop Lake Leatherwood XC Ride departs$/i, title=>`<a href="https://ridewithgps.com/routes/56614525" target="_blank" rel="noopener">${title}</a>`).replace(/Dr\. J\.? Maniac/i, name=>`<a href="https://www.instagram.com/jasmanias_clubhouse/?hl=en" target="_blank" rel="noopener">${name}</a>`),scheduleDescription(e.description),escapeText(e.link||''))).join('')}</div></details>`).join('');
 }
 let cleanupRaffle=()=>{};
 const titles={'scavenger-hunt':'scavenger hunt','raffle':'raffle','schedule':'schedule','maps':'maps','group-rides':'routes','on-bike-clinics':'CLINICS','workshops':'expo','food':'food'};
@@ -98,6 +98,11 @@ function render(){
  });
  document.querySelector('#content').setAttribute('aria-labelledby','page-title');
  window.GritCopy?.apply();
+ if(key==='maps'&&!new URLSearchParams(location.search).has('cms')){
+  const intro=document.querySelector('.page-intro');
+  intro.innerHTML=escapeText(intro.textContent).replace(/\bBird\b/g,'<a href="https://www.instagram.com/wheelmouse/" target="_blank" rel="noopener">Bird</a>');
+ }
+
  // Apply food links after saved plain-text copy; the CMS inventories the original text nodes.
  if(key==='food'&&!new URLSearchParams(location.search).has('cms')){
   const links={'coffee':'https://howdycampers.com/','baked goods':'https://shady-grove-farm-bakery.square.site/','lunch':'https://www.instagram.com/theseasonedskillet.25/'};
