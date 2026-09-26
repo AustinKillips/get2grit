@@ -1,0 +1,650 @@
+@font-face{font-family:W95;src:url('assets/w95f.woff2') format('woff2');font-display:swap}
+*{box-sizing:border-box}:root{--pink:#f17fba;--yellow:#fff000;--ink:#111;--pixel:W95,'Courier New',monospace}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:var(--ink);font:16px/1.35 Arial,sans-serif}a{color:inherit}a:focus-visible,summary:focus-visible{outline:3px solid #111;outline-offset:5px}.skip{position:fixed;top:-100px;background:white;padding:10px;z-index:10}.skip:focus{top:10px}
+.paper{width:calc(100% - 32px);max-width:850px;margin:24px auto;position:relative;isolation:isolate;min-height:calc(100svh - 48px);container-type:inline-size;background:#fff}
+/* Keep the supplied repeat scale and registration below the opening artwork. */
+.grit-bg{--u:calc(100cqw / 5810)}
+.grit-bg:before,.grit-bg:after{content:"";position:absolute;z-index:-1;pointer-events:none;left:0;right:0}
+.grit-bg:before{top:0;height:calc(100cqw * 9490 / 5810);max-height:100%;background:url('assets/grit-screenprint-fast.webp') top center / 100% auto no-repeat;opacity:.27}
+.grit-bg:after{top:calc(100cqw * 9490 / 5810);bottom:0;background-image:url('assets/grit-pattern-heavy-fast.webp');background-repeat:repeat;background-size:calc(var(--u) * 2408) calc(var(--u) * 2408);background-position:calc(var(--u) * 2200) calc(var(--u) * 1816);opacity:.27}
+.inner{max-width:610px;margin:auto;padding:32px 28px 18px}header{margin-bottom:40px}.brand{display:inline-flex;align-items:center;font-family:var(--pixel);font-size:2.5rem;line-height:.95;text-decoration:underline;text-underline-offset:4px;white-space:nowrap}.brand span{background:#eaa9cb;color:#000;opacity:1;font:1rem/.95 var(--pixel);margin-left:5px;padding:2px 5px 3px;white-space:normal}nav{display:flex;flex-wrap:wrap;gap:9px 10px;margin-top:23px;max-width:420px}nav a{background:var(--yellow);padding:0 7px 3px;text-decoration:none;font:2.05rem/1.05 var(--pixel)}nav a:hover,nav a[aria-current=page]{background:var(--pink)}main:focus{outline:none}.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:15px;margin:0 0 30px}h1{font:3rem/1.05 var(--pixel);text-decoration:underline;text-underline-offset:5px;margin:0}h2{font:2rem/1.1 var(--pixel);font-weight:400;margin:0 0 14px}.schedule-link{font:1.1rem var(--pixel)}body[data-view=schedule] .schedule-link{display:none}
+.day{margin:0 0 23px}.day summary{margin-bottom:-10px;display:flex;align-items:center;width:max-content;max-width:100%;cursor:pointer;list-style:none;font:4rem/1 var(--pixel)}.day summary::-webkit-details-marker{display:none}.day-label{background:var(--yellow);padding:1px 10px 7px}.day-arrow{position:relative;display:grid;place-items:center;width:48px;height:56px;flex-shrink:0;font:2.6rem/1 var(--pixel);padding-right:9px}.day-arrow:before{content:"";position:absolute;inset:0;background:var(--yellow);clip-path:polygon(0 0,100% 50%,0 100%);z-index:-1}.day-arrow:after{content:"+"}.day[open] .day-arrow{width:56px;padding:0 0 9px}.day[open] .day-arrow:before{clip-path:polygon(0 0,100% 0,50% 100%)}.day[open] .day-arrow:after{content:"−"}.day-body{background:#929292b3;padding:18px 17px 24px;margin:10px 0 30px}.day-date{font:1rem var(--pixel);margin:0 0 18px}.event{margin-bottom:22px}.event:last-child{margin-bottom:0}.when{font-size:.875rem;display:block;margin-bottom:3px}.when mark{background:var(--yellow);color:inherit;padding:0 2px}.event h3{font:1.15rem var(--pixel);text-transform:uppercase;margin:0 0 3px}.event h3 a{background:#ffffffb3;text-underline-offset:2px}.event p{margin:0;max-width:60ch}.schedule-note{font-size:.875rem;max-width:360px;margin:26px 0 0;background:#ffffffe0;padding:8px 10px}.intro{background:#ffffffc9;padding:10px;margin:0 0 25px}.detail{margin-bottom:26px}.detail h2{text-transform:none}.detail p{background:#929292b3;padding:16px;margin:0}.label{display:inline-block;background:var(--yellow);padding:2px 5px;margin:0 0 10px;font:1rem var(--pixel)}.map-card{margin-bottom:36px;text-align:center}.map-card h2{margin:0 0 28px;position:relative}.map-card h2:after{content:"";display:block;width:36px;height:22px;margin:8px auto -18px;background:var(--yellow);clip-path:polygon(0 0,100% 0,50% 100%)}.map-card img{display:block;width:100%;height:auto;border:7px solid #111;border-radius:4px;background:white}.map-card>a{display:block}.map-card p{background:transparent;padding:10px;font-size:.875rem}.route-note{background:#929292b3;padding:16px}.error-art{width:160px;max-width:100%;mix-blend-mode:multiply}footer{padding:35px 8px 5px;margin-top:30px}.footer-art{display:block;font:2rem/1 var(--pixel);text-decoration:none;color:#555;transform:rotate(-4deg);margin-bottom:28px}footer p{font-size:.75rem;line-height:1.4;color:#333}
+/* Splash composition follows the reference poster, scaling with its container. */
+.welcome .inner{max-width:none;min-height:0;aspect-ratio:270 / 590;padding:0;position:relative;display:block}
+.welcome:before{height:100%;background-size:100% 100%;opacity:.9}.welcome:after{display:none}
+.welcome-heading{position:absolute;left:15%;top:2%;display:block;width:83%;height:auto;opacity:.63}
+.welcome-enter{font:clamp(4rem,25cqw,8.3rem)/.88 var(--pixel);text-decoration:none;display:block;position:absolute;left:38%;top:23.5%;width:62%;margin:0;padding:0;color:#000}
+.welcome-enter:after{content:"";position:absolute;left:62%;top:43%;width:38%;height:1.45em;background:var(--yellow);clip-path:polygon(0 0,100% 50%,0 100%)}
+.welcome-caption{position:absolute;left:6%;top:78%;font:clamp(1.25rem,5.8cqw,3.1rem)/1.4 var(--pixel);max-width:40%;margin:0}
+@media(max-width:600px){.paper{width:100%;margin:0;min-height:100svh}.inner{padding:24px 18px 16px}.brand{font-size:2.1rem}.brand span{font-size:.85rem}.brand{white-space:nowrap}header{margin-bottom:30px}nav{gap:7px 8px;margin-top:20px;max-width:320px}nav a{font-size:1.8rem}h1{font-size:2.6rem}.section-head{margin-bottom:26px}.day summary{font-size:3.4rem}.day-arrow{width:39px;height:48px}.day[open] .day-arrow{width:45px}.day-label{padding:0 7px 5px}.day-body{padding:15px 12px 20px}.day{margin-bottom:19px}footer{padding-top:25px}.footer-art{font-size:1.8rem}}
+@media(max-width:350px){.brand{font-size:1.8rem}.brand span{font-size:.75rem}.day summary{font-size:2.85rem}.inner{padding-left:14px;padding-right:14px}nav a{font-size:1.6rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{.paper{width:100%;margin:0}.paper:before,.paper:after,nav,footer{display:none}.day-body{background:white}.day{break-inside:avoid}}
+/* Annotation sizes are caps, with proportional scaling on narrow screens. */
+.brand{font-size:clamp(2.2rem,13.3613vw,3.975rem);max-width:100%}
+.brand span{font-size:clamp(.95rem,5.1681vw,1.5375rem);flex-shrink:1}
+nav{border:1px solid var(--ink);padding:5px;width:fit-content;max-width:100%}
+h1{font-size:clamp(2.25rem,10.8403vw,3.225rem)}
+.route-embed{margin:15px 0}.route-embed iframe{display:block;background:white;max-width:100%}.route-embed>a{display:inline-block;font-size:.875rem;background:#fff;padding:5px 7px;margin-top:5px}
+body[data-view="on-bike-clinics"] .section-head{position:relative;margin-bottom:35px;align-items:center}
+body[data-view="on-bike-clinics"] h1{text-decoration:none;font-size:clamp(1.7rem,8.5vw,3.225rem)}
+body[data-view="on-bike-clinics"] .section-head:after{content:"";position:absolute;left:42%;bottom:-24px;width:36px;height:24px;background:var(--yellow);clip-path:polygon(0 0,100% 0,50% 100%)}
+body[data-view="on-bike-clinics"] .schedule-link{font-size:.875rem}
+.clinic-logistics,.bring ul{list-style:none;padding:0;margin:0}.clinic-logistics{font:1.633125rem/1.2 var(--pixel);margin-bottom:26px}.clinic-logistics li{position:relative;padding-left:27px;margin:4px 0}.clinic-logistics li:before{content:"";position:absolute;left:2px;top:.22em;width:13px;height:13px;border-top:6px solid var(--yellow);border-right:6px solid var(--yellow);transform:rotate(45deg)}.clinic-logistics li:nth-child(-n+2){font-size:1.820625rem}.clinic-logistics .meeting-location{font-size:1.8375rem}.meeting-link{background:#fff;color:#000}.meeting-note{display:block;font: .875rem/1.4 Arial,sans-serif;margin-top:4px}.bring{font:1.6125rem/1.15 var(--pixel);margin-bottom:30px}.bring p{margin:0 0 3px}.bring li{margin:2px 0}.bring span{background:#fff;color:#000;box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:0 2px}
+.clinic{margin:0 0 22px}.clinic summary{list-style:none;display:flex;align-items:center;gap:12px;font:clamp(1.7rem,6.8vw,2.5rem)/1.1 var(--pixel);width:fit-content;max-width:100%;cursor:pointer}.clinic summary::-webkit-details-marker{display:none}.difficulty{display:block;flex:0 0 40px;width:40px;height:40px}.difficulty.first-touch{background:#ff1745;border-radius:0 0 100% 0;flex-basis:28px;width:28px;height:32px;margin:0 6px}.difficulty.beginner{background:#70ce69;border-radius:50%}.difficulty.intermediate{background:#2784ed}.difficulty.advanced{background:#262326;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);height:60px}
+.clinic-arrow{display:grid;place-items:center;position:relative;isolation:isolate;width:28px;height:30px;padding-right:5px;font:1.5rem var(--pixel);flex-shrink:0}.clinic-arrow:before{content:"";position:absolute;inset:0;background:var(--yellow);clip-path:polygon(0 0,100% 50%,0 100%);z-index:-1}.clinic-arrow:after{content:"+"}.clinic[open] .clinic-arrow{padding:0 0 7px}.clinic[open] .clinic-arrow:before{clip-path:polygon(0 0,100% 0,50% 100%)}.clinic[open] .clinic-arrow:after{content:"−"}.clinic-body{background:#929292b3;margin:14px auto 30px;padding:16px;width:calc(100% - 16px);max-width:none}.clinic-body p{margin:0 0 21px}.clinic-body p:last-child{margin-bottom:0}.clinic-body .clinic-meta{font:1.25rem/1.25 var(--pixel);margin:0}.clinic-meta mark{background:var(--yellow);color:#111}.clinic-meta .skill,.terrain{background:#fff;color:#111;padding:0 2px}.terrain.dark{background:#111;color:#fff}
+@media(max-width:350px){.clinic summary{gap:8px}.difficulty{flex-basis:30px;width:30px;height:30px}.difficulty.advanced{height:46px}.clinic-body{padding:12px}.clinic-arrow{width:23px}.brand span{padding-left:3px;padding-right:3px}}
+
+/* Scope the content border and panel refinements to clinics. */
+body[data-view="on-bike-clinics"] #page-content{border:1px solid var(--ink);padding:10px}
+.clinic-meta-row{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin-bottom:14px}
+.clinic-meta-row .clinic-meta{flex:0 1 auto}
+.clinic-description,.workshop-description>p{padding:12px;border-left:2px solid #666;background:#ffffff52}
+.clinic-description p{margin:0 0 16px}
+.clinic-description p:last-child{margin-bottom:0}
+@media(max-width:350px){body[data-view="on-bike-clinics"] #page-content{padding:7px}.clinic summary{font-size:1.55rem}.clinic-description,.workshop-description>p{padding:10px}}
+body[data-view="workshops"] .section-head{position:relative;margin-bottom:36px;align-items:flex-end}
+body[data-view="workshops"] h1{font-size:clamp(2rem,9vw,3.225rem);max-width:340px;text-decoration:none;line-height:1.05}
+body[data-view="workshops"] .section-head:after{content:"";width:38px;height:25px;position:absolute;left:44%;bottom:-24px;background:var(--yellow);clip-path:polygon(0 0,100% 0,50% 100%)}
+.workshop-logistics{margin:0 0 48px}.workshop{margin:0 0 30px}.workshop summary{display:grid;grid-template-columns:minmax(0,1fr) 28px;gap:5px 8px;cursor:pointer;list-style:none}.workshop summary::-webkit-details-marker{display:none}.workshop-title{font:clamp(1.55rem,5.8vw,2.15rem)/1.1 var(--pixel);text-transform:uppercase;overflow-wrap:anywhere}.workshop .clinic-arrow{align-self:center}.workshop[open] .clinic-arrow{padding:0 0 7px}.workshop[open] .clinic-arrow:before{clip-path:polygon(0 0,100% 0,50% 100%)}.workshop[open] .clinic-arrow:after{content:"−"}
+.workshop-meta{grid-column:1/-1;font:clamp(1.1rem,4.7vw,1.4rem)/1.2 var(--pixel);display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px}.workshop-meta mark{background:var(--yellow);color:#000;padding:0 2px}.inverse-label{background:#111;color:#fff;padding:0 2px;box-decoration-break:clone;-webkit-box-decoration-break:clone}.workshop-location:not([href]){text-decoration:none;cursor:inherit}.workshop-location[href],.presenter[href]{text-decoration:underline;text-underline-offset:3px}.workshop-body{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:14px;margin-top:12px;align-items:start}.workshop-presenters{font:1.1rem/1.15 var(--pixel);overflow-wrap:anywhere}.presenter{display:block}.workshop-presenters>.inverse-label{display:inline-block;margin-bottom:3px}.workshop-description{background:#929292b3;padding:16px}.workshop-description p{margin:0}.workshop a[href]:focus-visible{outline:2px solid #111;outline-offset:3px}
+@media(max-width:350px){.workshop-body{gap:10px}.workshop-description{padding:11px}.workshop-presenters{font-size:1rem}.workshop-logistics{margin-bottom:35px}}
+
+/* Metadata stays in the summary so it remains visible when folded. */
+.workshop{border:1px solid var(--ink);padding:10px;display:flow-root}
+.workshop-presenters{grid-column:1/-1;font:1.4125rem/1.2 var(--pixel);overflow-wrap:normal}
+.workshop-presenters .presenter{display:inline}
+.workshop-presenters>.inverse-label{display:inline;margin:0}
+.workshop-meta>span{font-size:1.5875rem}
+.workshop-location{background:#9de2a1;padding:2px}
+.workshop-body{display:block;margin-top:14px}
+.workshop[open]>summary{float:left;width:48%;margin-bottom:12px}
+.workshop[open]>.workshop-body{margin:0 0 0 52%}
+.workshop-title{overflow-wrap:normal}
+.workshop-description{padding:12px}
+@media(max-width:420px){
+ .workshop[open]>summary{float:none;width:100%;margin-bottom:0}
+ .workshop[open]>.workshop-body{margin:14px 0 0}
+ .workshop-presenters{font-size:1.25rem}
+}
+
+/* Full-width title above the expanded metadata/description columns. */
+.workshop{position:relative;border-color:transparent}
+.workshop:hover,.workshop[open]{border-color:var(--ink)}
+.workshop summary>.workshop-location{grid-column:1/-1;justify-self:start;font:1.4rem/1.2 var(--pixel)}
+.workshop[open] .workshop-title{grid-column:1/-1;width:calc(208.333% - 38px);padding-right:4px}
+.workshop[open] summary>.clinic-arrow{position:absolute;right:10px;top:10px}
+.workshop[open]>.workshop-body{padding-top:75px}
+@media(max-width:420px){
+ .workshop[open] .workshop-title{width:auto;grid-column:1}
+ .workshop[open] summary>.clinic-arrow{position:relative;right:auto;top:auto}
+ .workshop[open]>.workshop-body{padding-top:0}
+}
+
+/* Yellow description frame; minimum height permits longer copy to grow. */
+.workshop-description{background:#ffea00;padding:27px 10px;min-height:237.97px;display:flex;flex-direction:column;justify-content:center;align-items:stretch;gap:10px}
+.workshop-description>.description-label{font:1.25rem/1 var(--pixel);text-align:center;color:#111}
+.workshop-description>p{background:#f5f5f5;margin:0;width:100%;color:#111}
+@media(min-width:421px){.workshop[open]>.workshop-body{padding-top:36px}}
+
+/* Shared workshop/clinic cards; names wrap as whole units. */
+.workshop-presenters .presenter{display:inline-block;white-space:nowrap}
+.presenter-stack{display:inline-block;vertical-align:top}
+.workshop-presenters .presenter-stack .presenter{display:block}
+footer p{font-size:23px}
+.clinic-title{display:flex;align-items:center;gap:10px;text-transform:none}
+.clinic-skills{grid-column:1/-1;font:1.4125rem/1.2 var(--pixel)}
+.workshop-description>.clinic-description{background:#f5f5f5;color:#111;width:100%;min-width:0}
+.clinic-card .workshop-meta>span{white-space:normal}
+
+.clinic-card .workshop-meta mark{white-space:nowrap}
+.workshop-description>.clinic-description p+p{margin-top:16px}
+
+/* Open-card spacing and decorative cows share the existing column breakpoint. */
+.workshop-description{padding:10px}
+.workshop-description>.description-label{text-align:left}
+.workshop[open] .workshop-presenters{padding-top:20px}
+.workshop[open] summary>.workshop-location{margin-top:10px}
+.workshop[open] .workshop-meta>span{margin-top:6px}
+.workshop-cow{position:absolute;left:10px;bottom:10px;width:48%;object-fit:contain;pointer-events:none}
+.workshop-cow[hidden]{display:none}
+@media(max-width:420px){.workshop-cow{display:none}}
+
+/* Navigation and directional accents shared throughout the current guide. */
+:root{--arrow-blue:#0000ff}
+body[data-view] .section-head:after,.map-card h2:after{content:none}
+.clinic-arrow:before,.day-arrow:before{background:var(--arrow-blue)}
+.clinic-arrow,.day-arrow{color:#fff}
+.clinic-logistics li:before{border-color:var(--arrow-blue)}
+.workshop:nth-of-type(odd)>.workshop-cow{object-position:20% center}
+.workshop:nth-of-type(even)>.workshop-cow{object-position:80% center}
+
+.food-meal{grid-column:1/-1;font:1.6rem/1.15 var(--pixel);margin-top:8px}
+
+/* Food days expand vertically at every screen size. */
+.food-card{border:1px solid transparent;padding:10px;margin-bottom:30px}
+.food-card:hover,.food-card[open]{border-color:var(--ink)}
+.food-card summary{display:flex;justify-content:space-between;align-items:center;gap:12px;list-style:none;cursor:pointer}
+.food-card summary::-webkit-details-marker{display:none}
+.food-card[open] .clinic-arrow{padding:0 0 7px}
+.food-card[open] .clinic-arrow:before{clip-path:polygon(0 0,100% 0,50% 100%)}
+.food-card[open] .clinic-arrow:after{content:'−'}
+.food-day-body{margin-top:20px}
+.food-day-body .food-meal{margin:0 0 20px;font:inherit}
+.food-day-body .food-meal:last-child{margin-bottom:0}
+.food-meal h2{font:1.6rem/1.15 var(--pixel);margin:0;background:var(--yellow);padding:10px}
+.food-meal p{margin:0;background:#f5f5f5;border:10px solid var(--yellow);border-top:0;padding:12px;color:#111}
+.food-note{background:#f5f5f5;padding:12px}
+
+/* Food is a permanently expanded day-by-day reference. */
+section.food-card{border-color:var(--ink)}
+.food-day-title{margin:0}
+
+/* Route disclosure cards and schedule panels match the guide palette. */
+.route-card{border:1px solid transparent;padding:10px;margin:0 0 30px}
+.route-card:hover,.route-card[open]{border-color:var(--ink)}
+.route-card summary{display:grid;grid-template-columns:minmax(0,1fr) 28px;gap:10px;list-style:none;cursor:pointer}
+.route-card summary::-webkit-details-marker{display:none}
+.route-card summary>.label{grid-column:1/-1;justify-self:start;margin:0}
+.route-card[open] .clinic-arrow{padding:0 0 7px}
+.route-card[open] .clinic-arrow:before{clip-path:polygon(0 0,100% 0,50% 100%)}
+.route-card[open] .clinic-arrow:after{content:'−'}
+.route-body{margin-top:16px}
+.route-description{background:#f5f5f5;border:10px solid var(--yellow);padding:12px;margin:0}
+.day-body{background:transparent;border:1px solid var(--ink);padding:12px}
+.day-date{font:1.35rem/1.2 var(--pixel)}
+.day-body .event{background:var(--yellow);padding:10px;margin-bottom:18px}
+.day-body .when{font:1.35rem/1.2 var(--pixel);margin-bottom:8px}
+.day-body .event h3{font-size:1.5rem;margin-bottom:8px}
+.day-body .event h3 a{background:transparent}
+.day-body .event p{background:#f5f5f5;padding:12px;border-left:2px solid #666}
+.welcome{min-height:0}
+.welcome .inner{aspect-ratio:5810 / 9490}
+.welcome-heading{transform:rotate(-3deg);transform-origin:center}
+.welcome-enter{font-size:clamp(3rem,21cqw,7rem);line-height:1.04;top:23%}
+.welcome-enter:after{top:40%;height:1.45em}
+
+/* Continue the splash artwork into the repeat without stretching the poster. */
+.welcome{min-height:calc(100svh - 48px)}
+.welcome:before{height:calc(100cqw * 9490 / 5810);background-size:100% auto}
+.welcome:after{display:block;opacity:.9}
+@media(max-width:600px){.welcome{min-height:calc(100svh - 24px)}}
+
+/* Pixel-dither prize frame, matching the festival print palette. */
+.raffle-frame{padding:14px;background-color:#0000ff;background-image:repeating-conic-gradient(#0000ff 0% 25%,#f17fba 0% 50%);background-size:4px 4px;border:2px solid #111}
+.raffle-screen{aspect-ratio:1;display:grid;place-items:center;background:#f5f5f5;overflow:hidden;border:2px solid #111}
+.raffle-prize-image{width:100%;height:100%;object-fit:contain;filter:grayscale(1) contrast(1.2)}
+.raffle-empty{text-align:center;padding:20px}.raffle-empty img{width:100px;height:100px;object-fit:contain}.raffle-empty p{font:2.5rem/1 var(--pixel);margin:12px 0}.raffle-empty span{font-size:1rem}
+.raffle-caption{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:14px 0}.raffle-caption :is(h2,h3){font:1.6rem/1.15 var(--pixel);margin:0}.raffle-count{white-space:nowrap;font:1.2rem var(--pixel)}
+.raffle-controls{display:flex;gap:8px;justify-content:space-between;margin-bottom:25px}.raffle-controls button{font:1.2rem var(--pixel);background:var(--yellow);border:1px solid #111;padding:8px 12px;min-height:44px;cursor:pointer}
+.raffle-purchase{background:var(--yellow);padding:10px;margin-top:30px}.raffle-purchase h2{font:1.8rem var(--pixel);margin:0 0 10px}.raffle-purchase-body{background:#f5f5f5;padding:16px}.raffle-purchase-body p{margin:0}.raffle-purchase-body .raffle-redemption{margin-top:16px}.raffle-buy{display:block;background:#0000ff;color:#fff;padding:14px;font:1.5rem var(--pixel);text-align:center;text-decoration:none}
+.raffle-showcase [hidden],.raffle-purchase [hidden]{display:none}
+
+/* Prize photos and donor identity rotate together. */
+.raffle-prize-image{filter:none;background:#fff;min-width:0;min-height:0}
+.raffle-screen{touch-action:pan-y}
+.raffle-donor{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;background:#fff;padding:12px;margin-bottom:14px;min-height:90px;border-left:3px solid #0000ff}
+.raffle-donor>span{font:1.2rem var(--pixel);width:100%}.raffle-donor img{max-width:160px;width:auto;height:45px;object-fit:contain}.raffle-donor strong{font:1.35rem var(--pixel)}
+.raffle-photo-pending{padding:30px;text-align:center}.raffle-photo-pending span{font:1rem var(--pixel);background:var(--yellow);padding:4px}.raffle-photo-pending p{font:2.2rem/1.1 var(--pixel)}
+.raffle-filmstrip{position:relative;display:flex;gap:10px;overflow-x:auto;padding:5px 3px 14px;scroll-snap-type:x proximity;max-width:100%}
+.raffle-filmstrip button{flex:0 0 84px;height:84px;border:2px solid #111;background:#f5f5f5;padding:4px;cursor:pointer;scroll-snap-align:center;color:#111}
+.raffle-filmstrip button[aria-pressed=true]{border:4px solid #0000ff;background:var(--yellow)}
+.raffle-filmstrip img{width:100%;height:100%;object-fit:contain}.raffle-filmstrip span{font:.95rem/1 var(--pixel);overflow-wrap:anywhere}
+.raffle-purchase-body .raffle-buy{margin-top:15px}.raffle-template-note{font-size:.95rem;margin-top:14px!important}
+
+/* Transparent viewer interior; the dither lives only in the frame. */
+.raffle-frame{position:relative;background:none}
+.raffle-frame:before{content:"";position:absolute;inset:0;padding:14px;pointer-events:none;background:repeating-conic-gradient(#0000ff 0% 25%,#f17fba 0% 50%) 0 0 / 4px 4px;-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude}
+.raffle-screen{background:rgb(245 245 245 / 70%)}
+.raffle-prize-image{background:transparent}
+.raffle-prize-image{opacity:1;mix-blend-mode:normal}
+
+/* Clear day / meal / detail hierarchy, shared across all food days. */
+.food-day-title{font-size:clamp(2rem,5vw,2.5rem)}
+.food-meal h3{font:1.7rem/1.15 var(--pixel);margin:0;padding:10px 14px;color:#fff;background:#000}
+.food-points{margin:0;padding:16px 18px 16px 38px;background:#f5f5f5;border:8px solid var(--yellow);border-top:0;font:1.25rem/1.5 Arial,sans-serif}
+.food-points>li+li{margin-top:12px}.food-points li::marker{color:#0000ff}
+.food-restaurants{padding-left:24px;margin-top:10px}.food-restaurants li+li{margin-top:8px}
+.food-restaurants a{text-decoration:underline;text-underline-offset:3px}
+
+/* Clinic annotations apply consistently across difficulty levels. */
+.clinic-skills{background:#fff;font-size:1.7875rem}
+.clinic-card .workshop-meta>span{font-size:1.775rem}
+.clinic-card[data-level="beginner"] .terrain{background:#7cdf95;color:#000}
+.clinic-card[data-level="intermediate"] .terrain{background:#247ef5;color:#fff}
+/* Food uses one outer border and adjoining meal blocks. */
+body[data-view="food"] #page-content{border:2px solid #111}
+section.food-card{border:0}
+.food-day-body .food-meal{margin:0}
+.food-points{padding:14px 12px;list-style:none}
+.food-points>li{display:grid;grid-template-columns:minmax(0,1fr) 4.8rem;gap:12px}
+.food-item-copy{position:relative;padding-left:18px;min-width:0}
+.food-item-copy:before{content:'•';position:absolute;left:0;color:#0000ff}
+.food-item-time{border-left:1px solid #aaa;padding-left:8px;font:1.1rem/1.25 var(--pixel);overflow-wrap:anywhere}
+.food-item-time>span{display:block;font-size:.85rem;color:#555;margin-bottom:4px}
+.food-restaurants{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 16px;padding-left:20px}
+.food-restaurants li+li{margin-top:0}
+.food-vendor-logo{display:inline-block;vertical-align:middle;max-width:100%}
+.food-vendor-logo img{display:none;width:auto;max-width:120px;max-height:68px;vertical-align:middle}
+.food-vendor-logo.logo-loaded img{display:inline-block}
+.food-vendor-logo.logo-loaded>span{display:none}
+@media(max-width:420px){.food-points{padding:12px 8px}.food-points>li{grid-template-columns:minmax(0,1fr) 3.5rem;gap:8px}.food-item-time{font-size:1rem}.food-restaurants{gap:8px 12px;padding-left:14px}.food-restaurants a{overflow-wrap:anywhere}}
+/* Restaurant links are untimed recommendations and use the full meal width. */
+.food-points>li:has(.food-restaurants){grid-template-columns:minmax(0,1fr)}
+.food-points>li:has(.food-restaurants)>.food-item-time{display:none}
+
+/* Food timing and admission columns; compact metadata stacks on small phones. */
+.food-points>li{grid-template-columns:minmax(0,1fr) 6.5rem 4.8rem}
+.food-item-cost{border-left:1px solid #aaa;padding-left:8px;font:1.1rem/1.25 var(--pixel)}
+.food-item-cost>span{display:block;font-size:.85rem;color:#555;margin-bottom:4px}
+.food-item-time:empty,.food-item-cost:empty{border:0;padding:0}
+.food-points>li:has(.food-restaurants)>.food-item-cost{display:none}
+@media(max-width:540px){
+ .food-points>li{grid-template-columns:minmax(0,1fr) 6.5rem;gap:8px}
+ .food-item-copy{grid-column:1;grid-row:1 / span 2}
+ .food-item-time{grid-column:2;grid-row:1}
+ .food-item-cost{grid-column:2;grid-row:2;font-size:1rem}
+ .food-points>li:has(.food-restaurants){grid-template-columns:minmax(0,1fr)}
+}
+
+/* Keep meal rows aligned and give unticketed ride information more room. */
+.food-meal>h3{padding-top:5px;padding-bottom:5px}
+.food-points>li{align-items:center;grid-template-columns:minmax(0,1fr) 6.5rem 6.5rem}
+.food-credit{display:block;margin-top:6px;font-size:.85em;font-weight:normal}
+.food-item-cost small{display:block;margin-top:6px;font: .9rem/1.3 Arial,sans-serif}
+.food-points>li.no-cost>.food-item-cost,.food-points>li.no-time>.food-item-time{display:none}
+.food-points>li.no-cost>.food-item-time{grid-column:2 / 4}
+.food-points>li.no-cost.no-time{grid-template-columns:minmax(0,1fr)}
+@media(max-width:540px){
+ .food-points>li{grid-template-columns:minmax(0,1fr) 6.5rem}
+ .food-points>li.no-cost{grid-template-columns:minmax(0,1fr) minmax(6.5rem,.8fr)}
+ .food-points>li.no-cost>.food-item-time{grid-column:2;grid-row:1 / span 2}
+ .food-points>li.no-cost.no-time{grid-template-columns:minmax(0,1fr)}
+}
+
+.food-item-copy{line-height:1.25}
+.food-credit{font-size:.7em;font-style:italic;line-height:1.3;margin-top:-5px}
+.food-dietary{display:block;font-size:.8em;line-height:1.3;margin-top:6px}
+.food-item-cost.cost-included{background:transparent}
+.food-item-cost.cost-paid{background:transparent}
+.food-item-cost.cost-included,.food-item-cost.cost-paid{padding:6px 8px}
+.food-restaurants a{display:flex;align-items:center;justify-content:center;min-height:110px}
+.food-restaurants .food-vendor-logo img{max-width:100%;max-height:100px}
+
+/* Food overview and Sunday typography apply at every viewport size. */
+.food-overview{margin:10px 10px 24px;padding:14px 16px;background:#f5f5f5;border-left:8px solid #fff000;font:20px/1.3 Arial,sans-serif}
+.food-overview h2{margin:0 0 10px;font:1.75rem/1 var(--pixel)}
+.food-overview ul{margin:0;padding-left:22px}
+.food-overview li+li{margin-top:8px}
+.food-overview li::marker{color:#0000ff}
+.food-card[data-day="sunday"],.food-card[data-day="sunday"] .food-item-copy{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace}
+.food-card[data-day="sunday"] .food-item-copy strong{font-weight:600}
+
+.food-overview{margin:0 0 24px}
+.food-restaurants a{display:inline;min-height:0}
+.food-item-copy>.food-item-title,.food-card[data-day="sunday"] .food-item-copy>.food-item-title{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;font-weight:700}
+.food-dietary{font-size:14px;font-weight:400}
+
+/* Expo grouping and final shared food details. */
+.food-item-cost.cost-included,.food-item-cost.cost-paid{background:#ded9d9}
+.food-dietary{font:14px/1.3 Arial,sans-serif}
+.food-dietary+.food-credit{margin-top:3px}
+.food-item-copy{line-height:1.18}
+.food-meal>h3{background:#878282}
+.food-overview{position:relative;margin-top:65px}
+.food-overview-cows{position:absolute;bottom:100%;left:12%;width:76%;height:62px;display:flex;justify-content:center;gap:18px;overflow:hidden;pointer-events:none}
+.food-overview-cows img{width:28%;height:100px;object-fit:contain;object-position:top;transform:translateY(8px)}
+footer p{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace}
+.footer-date{display:block;text-align:center}
+.expo-group>h2{font:2.2rem/1 var(--pixel);margin:30px 0 18px;text-decoration:underline}
+.workshop-partner-logo{display:none;max-width:100%;width:auto;height:70px;object-fit:contain;object-position:left center;margin-top:8px}
+.workshop[open] .workshop-partner-logo{display:block}
+.workshop.has-partner-logo[open] .workshop-presenters{padding-top:6px;line-height:1.1}
+.workshop.has-partner-logo[open] summary>.workshop-location{margin-top:5px}
+
+.expo-group>h2{width:fit-content;max-width:100%;background:#fff;padding:2px}
+.vendor-name{white-space:normal}
+
+@media(max-width:600px){footer p,footer .footer-date{text-align:justify;text-align-last:justify}}
+
+.raffle-prize-image{object-fit:cover;object-position:center}
+@media(max-width:600px){footer p,footer .footer-date{text-align:center;text-align-last:center}.footer-venue,.footer-city{display:block}.footer-separator{display:none}}
+
+/* Caption above the frame; donor/supporter bar remains in normal document flow. */
+.raffle-caption{justify-content:center;text-align:center;margin:0 0 12px;min-height:3.7rem}
+.raffle-donor{margin-top:0;min-height:110px}
+.raffle-donor.is-interlude{justify-content:center}
+.raffle-donor .raffle-supporters{width:100%;max-width:320px;height:84px;object-fit:contain}
+
+/* The prize caption occupies the extended lower band of the dither frame. */
+.raffle-frame>.raffle-caption{position:relative;margin:0 -14px -14px;min-height:72px;padding:12px 14px;align-items:center;background:repeating-conic-gradient(#0000ff 0% 25%,#f17fba 0% 50%) 0 0 / 4px 4px;color:#fff}
+.raffle-frame>.raffle-caption :is(h2,h3){text-shadow:1px 1px 0 #111,-1px -1px 0 #111;overflow-wrap:anywhere}
+
+.scavenger-manifest{margin:0}
+.scavenger-manifest>img{display:block;width:100%;height:auto;background:white}
+.scavenger-manifest figcaption{padding:12px;background:#fff;font:16px/1.4 Arial,sans-serif}
+.manifest-transcript{margin-top:20px;background:#fff;padding:14px}
+.manifest-transcript>summary{cursor:pointer;font:1.35rem/1.3 var(--pixel)}
+.manifest-transcript summary:focus-visible{outline:3px solid #0000ff;outline-offset:4px}
+.manifest-text{font:16px/1.45 Arial,sans-serif;overflow-wrap:anywhere}
+.manifest-text h2{font:1.65rem/1.2 var(--pixel);margin-top:20px}
+.manifest-text table{width:100%;border-collapse:collapse;table-layout:fixed}
+.manifest-text caption{text-align:left;font-weight:bold;margin:16px 0 8px}
+.manifest-text th,.manifest-text td{border:1px solid #888;padding:8px;text-align:left;vertical-align:top}
+.manifest-text th:first-child{width:40%}
+.manifest-text tbody th{font-weight:normal}
+
+.scavenger-manifest figcaption{margin-top:14px}
+@media(max-width:600px){
+ body[data-view="scavenger-hunt"] .section-head{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+ body[data-view="scavenger-hunt"] header{margin-bottom:24px}
+ .scavenger-manifest>img{width:calc(100% + 36px);max-width:none;height:auto;margin-left:-18px}
+}
+
+/* Responsive food hierarchy and clinic stacking. */
+.food-day-title{width:fit-content;background:#fff;color:#000;padding:2px}
+body[data-view="on-bike-clinics"] .meeting-link{background:#4d58ff;color:#fff}
+.bring li>span{padding:4px 5px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.bring li{margin-bottom:10px}
+.bring li:nth-child(1)>span{background:#ffa8a8}.bring li:nth-child(2)>span{background:#c2a8ff}.bring li:nth-child(3)>span{background:#b3ffc6}.bring li:nth-child(4)>span{background:#ffb561}
+.brand .brand-tagline{background:none;padding:0}
+.brand .brand-highlight{display:inline;background:#eaa9cb;margin:0;padding:2px 5px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone;font:inherit}
+.route-card summary>.label,.route-distance{font:1.6rem/1.2 var(--pixel);grid-column:1/-1;width:fit-content}
+.route-no-drop{font:1.3rem/1.2 var(--pixel);grid-column:1/-1;background:#7cdf95;width:fit-content;padding:3px 5px}
+body[data-view="group-rides"] .ride-intro,.day-body{border:12px solid transparent;background:linear-gradient(#f5f5f5,#f5f5f5) padding-box,repeating-conic-gradient(#0000ff 0% 25%,#f17fba 0% 50%) 0 0 / 4px 4px border-box}
+.day-body .event{background:transparent;padding:0;margin:0 0 24px;display:block}
+.day-body .event:last-child{margin-bottom:0}.day-body .event p{background:transparent;padding:0;white-space:pre-line}
+.day-body .event h3{margin:5px 0;font-size:1.6rem}.day-body .event .when{font:1.35rem/1.2 var(--pixel)}
+@media(max-width:600px){
+ .food-points>li,.food-points>li.no-cost,.food-points>li.no-cost.no-time,.food-points>li:has(.food-restaurants){grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;align-items:start}
+ .food-points>li>.food-item-copy{grid-column:1/-1;grid-row:1}
+ .food-points>li>.food-item-time{grid-column:1;grid-row:2;margin-left:18px}
+ .food-points>li>.food-item-cost{grid-column:2;grid-row:2}
+ .food-points>li.no-cost>.food-item-time{grid-column:1/-1;grid-row:2}
+ .food-restaurants{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 22px;padding-left:18px}
+ .food-restaurants a{overflow-wrap:normal}.food-points>li+li{margin-top:22px}
+ .clinic-card[open]>summary{float:none;width:100%;margin-bottom:0}
+ .clinic-card[open]>.workshop-body{margin:14px 0 0;padding-top:0}
+ .clinic-card[open] .workshop-title{width:auto;grid-column:1}
+ .clinic-card[open] summary>.clinic-arrow{position:relative;right:auto;top:auto}
+ .clinic-card>.workshop-cow{display:none}
+}
+
+/* Food frames share the guide's pixel dither; meal cards need no bullets. */
+.food-points,.food-overview{border:8px solid transparent;background:linear-gradient(#f5f5f5,#f5f5f5) padding-box,repeating-conic-gradient(#fff000 0% 25%,#878282 0% 50%) 0 0 / 4px 4px border-box}
+.food-item-copy{padding-left:0}
+.food-item-copy:before{content:none}
+.food-restaurants{list-style:none;padding-left:0}
+.physical-therapy .workshop-presenters{padding-top:0}
+.physical-therapy .workshop-location{margin-top:0}
+@media(max-width:600px){.food-points>li>.food-item-time{margin-left:0}}
+
+/* Raffle donors and food overview use the shared purple pixel frame. */
+.raffle-donor{border:8px solid transparent;background:linear-gradient(#bababa,#bababa) padding-box,repeating-conic-gradient(#0000ff 0% 25%,#f17fba 0% 50%) 0 0 / 4px 4px border-box}
+.raffle-frame>.raffle-caption :is(h2,h3){font-weight:600}
+.food-overview{background:linear-gradient(#f5f5f5,#f5f5f5) padding-box,repeating-conic-gradient(#0000ff 0% 25%,#f17fba 0% 50%) 0 0 / 4px 4px border-box}
+.food-overview-cows{z-index:-1}
+.food-item-cost.cost-included,.food-item-cost.cost-paid{background:transparent}
+.day-body .event p{padding-left:10px}
+.schedule-meal{display:block;white-space:normal}
+.schedule-meal+.schedule-meal{margin-top:14px}
+.schedule-credit{display:block;font:italic 14px/1.4 Arial,sans-serif;margin-top:3px}
+
+.ride-intro h2{font:1.8rem/1.2 var(--pixel);margin:0 0 14px}
+.ride-intro p{margin:0 0 14px}.ride-intro p:last-child{margin-bottom:0}
+
+/* Shared dimensions keep every sponsor and the interlude in the same frame. */
+.ride-intro{opacity:.9}
+.raffle-donor{display:block;border:2px solid #111;padding:17px;min-height:0;height:174px;background:repeating-conic-gradient(#0000ff 0% 25%,#f17fba 0% 50%) 0 0 / 4px 4px}
+.raffle-donor-inner{height:100%;border:2px solid #111;padding:8px 12px;display:grid;grid-template-rows:22px 1fr;place-items:center;background:repeating-conic-gradient(#c9c9c9 0% 25%,#c3c3c3 0% 50%) 0 0 / 2px 2px}
+.raffle-donor-inner>span{justify-self:start;font:1.2rem/1 var(--pixel)}
+.raffle-donor img,.raffle-donor .raffle-supporters{grid-row:2;width:220px;max-width:100%;height:64px;object-fit:contain}
+.raffle-donor strong{grid-row:2;text-align:center;font:1.35rem/1.15 var(--pixel)}
+.raffle-donor.is-interlude .raffle-supporters{grid-row:1 / 3}
+/* Welcome artwork keeps its original proportions while the pattern continues. */
+.welcome{width:100%;max-width:none;margin:0;min-height:100svh}
+.welcome .inner{aspect-ratio:auto;min-height:100svh;padding:32px 18px;display:flex;flex-direction:column;align-items:center;gap:40px}
+.welcome-enter{position:relative;left:auto;top:auto;align-self:flex-end;width:62%;font-size:clamp(4rem,28.21cqw,10rem);font-weight:700;line-height:1.04}
+.welcome-heading{position:relative;left:auto;top:auto;width:100%;height:auto;transform:none;opacity:.63}
+.welcome-caption{position:static;max-width:100%;align-self:flex-start;display:inline-block;padding:10px 14px;border:2px solid #111;background:var(--yellow);font:1.4rem/1.2 var(--pixel);text-decoration:none}
+
+#bike-guidance-title{color:#fff;background:#000;width:fit-content;padding:0 2px}
+.route-card>summary{background:#a19b9b}
+.day-body{background:linear-gradient(rgb(245 245 245 / .9),rgb(245 245 245 / .9)) padding-box,repeating-conic-gradient(#0000ff 0% 25%,#f17fba 0% 50%) 0 0 / 4px 4px border-box}
+body[data-view="workshops"] .workshop-meta>span{font-size:1.775rem}
+@media(max-width:600px){
+ body[data-view="workshops"] .workshop[open]>summary{float:none;width:100%;margin-bottom:0}
+ body[data-view="workshops"] .workshop[open]>.workshop-body{margin:14px 0 0;padding-top:0}
+ body[data-view="workshops"] .workshop[open] .workshop-title{width:auto;grid-column:1}
+ body[data-view="workshops"] .workshop[open] summary>.clinic-arrow{position:relative;right:auto;top:auto}
+ body[data-view="workshops"] .workshop>.workshop-cow{display:none}
+}
+.day-body{background:linear-gradient(rgb(245 245 245 / .9),rgb(245 245 245 / .9));background-clip:padding-box;position:relative}.day-body:before{content:"";position:absolute;inset:-12px;pointer-events:none;border:12px solid transparent;background:repeating-conic-gradient(#0000ff 0% 25%,#f17fba 0% 50%) 0 0 / 4px 4px;border-radius:0;mask:linear-gradient(#fff 0 0) padding-box,linear-gradient(#fff 0 0);mask-composite:exclude}
+
+/* Match clinic metadata rhythm in both folded and expanded expo cards. */
+body[data-view="workshops"] .workshop>summary{row-gap:5px}
+body[data-view="workshops"] .workshop .workshop-presenters{padding-top:0;line-height:1.2}
+body[data-view="workshops"] .workshop summary>.workshop-location{margin-top:0}
+
+/* Welcome reading order: top-left button, entry, bottom artwork. */
+.welcome-heading{margin-top:auto}
+
+/* Bike guidance highlights and compact route metadata share all viewport sizes. */
+.ride-intro .bike-word,.ride-intro .trail-word{color:#fff;background:#000;padding:0 2px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.ride-intro .trail-word-blue{background:#247ef5}
+.ride-intro .trail-word-green{background:#218548}
+.route-card>summary{border:2px solid #111;padding:8px;gap:5px 8px}
+.route-card>summary>.workshop-title{color:#fff;background:#000;width:fit-content;padding:0 2px}
+.route-card>summary>.label,.route-card>summary>.route-distance,.route-card>summary>.route-no-drop{margin:0}
+
+.page-intro{font:16px/1.4 Arial,sans-serif;background:rgb(245 245 245 / .9);padding:12px;border-left:2px solid #111;margin:0 0 26px}
+.map-card h2{width:fit-content;max-width:100%;margin-left:auto;margin-right:auto;background:#000;color:#fff;padding:0 3px}
+.food-points{background:linear-gradient(#f5f5f5,#f5f5f5) padding-box,repeating-conic-gradient(#f17fba 0% 25%,#878282 0% 50%) 0 0 / 4px 4px border-box}
+.raffle-donor-inner{position:relative;grid-template-rows:22px 1fr 22px}
+.raffle-donor-inner>span:first-child{background:#000;color:#fff;padding:1px 3px;width:fit-content}
+.raffle-donor img,.raffle-donor .raffle-supporters{height:48px}
+.raffle-donor-inner>.raffle-thanks{grid-row:3;justify-self:end;align-self:end;background:#7cdf95;color:#111;padding:2px 5px;font:1.3rem/1.2 var(--pixel)}
+
+body[data-view="maps"] .page-intro{background:transparent}
+.day-body{box-shadow:inset 0 0 0 2px #000}
+.day-body .event p{border-left-color:rgb(157,226,161)}
+.food-meal h3{border:1px solid #000}
+
+.day-label{border:1px solid #111}
+.page-intro{background:transparent}
+.day-body .event p{border-left-color:#666}
+.map-card>a{padding:7px;border:2px solid #111;background:repeating-conic-gradient(#0000ff 0% 25%,#f17fba 0% 50%) 0 0 / 4px 4px}
+.map-card img{border:2px solid #111;border-radius:0}
+.route-description{border-width:7px;margin-top:-17px}
+.clinic-card .workshop-description{background:repeating-conic-gradient(#ff9b32 0% 25%,#878282 0% 50%) 0 0 / 4px 4px}
+.clinic-card .description-label{background:#ff9b32;width:fit-content;padding:2px 4px}
+.food-overview{box-shadow:inset 0 0 0 2px #000}
+.food-overview h2{margin-top:-44px;margin-bottom:16px;width:fit-content;position:relative;z-index:1}
+/* Leave the raised overview title clear of the decorative cows. */
+.food-overview-cows{left:38%;width:60%;gap:10px}
+
+#food-overview-title{color:#fff;background:#000;padding:0 2px}
+
+body[data-view="food"] #page-content{border:0}
+.food-card,.food-card:hover,.food-card[open]{border:0}
+.food-card>summary{justify-content:flex-start;width:fit-content;gap:0}
+.food-card>summary>.food-day-title{background:var(--yellow);margin:0;padding:2px}
+.raffle-donor{height:216px}
+.raffle-donor img,.raffle-donor .raffle-supporters{height:90px}
+
+.food-overview{font-size:16px}
+.food-item-time,.food-item-cost{font-size:20px}
+.raffle-donor{height:183px;padding:20px 17px}
+.raffle-donor-inner{height:139px;display:flex;justify-content:center;align-items:center}
+.raffle-donor-inner>span:first-child{position:absolute;top:8px;left:12px}
+.raffle-donor-inner>.raffle-thanks{position:absolute;bottom:-5px;right:8px}
+body[data-view="workshops"] .workshop-description>p{border:2px solid #666}
+footer .footer-art{margin:28px 0 0}
+body[data-view="workshops"] h1{font-size:clamp(2.25rem,10.8403vw,3.225rem);text-decoration:underline;line-height:1.05;max-width:none}
+body[data-view="workshops"] .section-head:after{display:none}
+body[data-view="scavenger-hunt"] .section-head{position:static;width:auto;height:auto;padding:0;margin:0 0 30px;overflow:visible;clip-path:none;white-space:normal}
+body[data-view="scavenger-hunt"] .page-intro{white-space:pre-line}
+body[data-view="schedule"] .page-intro{border-bottom:2px solid #111}
+
+.brand .brand-highlight{white-space:nowrap}
+
+body[data-view="schedule"] .page-intro{border:0}
+.raffle-sponsor-link{display:flex;align-items:center;justify-content:center;width:100%;height:90px;text-decoration:none}
+.raffle-sponsor-link[hidden]{display:none}
+
+.raffle-footer-art{display:block;margin-top:32px}.raffle-footer-art img{display:block;width:100%;height:auto}
+
+/* Shared introduction rhythm and footer scale across guide pages. */
+footer p{font-size:18px}
+.footer-art{transform:none}
+.page-intro{border-left:0;margin-top:-29px}
+body[data-view="schedule"] .page-intro{border:0}
+.clinic-card .description-label{color:#fff;background:#000}
+.clinic-card .clinic-description{border:1px solid #666}
+body[data-view="on-bike-clinics"] #page-content{border:0}
+
+body[data-view="workshops"] .page-intro{margin-top:-38px}
+body[data-view="on-bike-clinics"] .page-intro{margin-top:-52px}
+body[data-view="on-bike-clinics"] h1{text-decoration:underline;text-underline-offset:5px}
+
+footer .footer-art{margin:0 0 18px}
+
+/* Shared map labels sit against their frames at every viewport width. */
+.map-card h2{font-size:30px;margin:0 18.55px -5px;max-width:calc(100% - 37.1px);z-index:1}
+footer .footer-art{margin:0 0 -13px min(62px,16vw)}
+#bike-guidance-title{margin-top:-31px;margin-right:-40px;margin-left:-5px}
+.punk-truck-stop .workshop-description{background:repeating-conic-gradient(#ffea00 0% 25%,transparent 0% 50%) 0 0 / 4px 4px}
+.clinic-card[data-level="first-touch"]{--clinic-color:#ff1745}
+.clinic-card[data-level="beginner"]{--clinic-color:#70ce69}
+.clinic-card[data-level="intermediate"]{--clinic-color:#2784ed}
+.clinic-card[data-level="advanced"]{--clinic-color:#262326}
+.clinic-card .difficulty{background:var(--clinic-color)}
+.clinic-card .workshop-description{background:repeating-conic-gradient(var(--clinic-color) 0% 25%,#878282 0% 50%) 0 0 / 4px 4px}
+
+body[data-view="workshops"] .workshop-description{background:repeating-conic-gradient(#ffea00 0% 25%,transparent 0% 50%) 0 0 / 4px 4px}
+/* Use the existing mobile cutoff for the framed desktop guide and welcome composition. */
+@media(min-width:601px){
+ body{background:#fff700}
+ .paper:not(.welcome){border:2px solid var(--ink)}
+ .welcome .inner{padding:32px clamp(24px,4vw,64px);gap:24px}
+ .welcome-enter{align-self:center;width:392px;max-width:65%;font-size:clamp(5rem,13svh,10rem);margin-top:12px}
+ .welcome-enter:after{left:100%;width:clamp(100px,18vw,280px);height:1.45em;top:40%}
+ .welcome-heading{width:392.08px;max-width:100%;height:266.83px;padding-top:22px;object-fit:contain;margin-top:auto}
+}
+/* Shared surface treatment; keep nested labels from compounding panel opacity. */
+:root{--surface-opacity:.9}
+body{background:#fff}
+body[data-view="schedule"] #content p{border-left:0}
+body[data-view="workshops"] .meeting-link{color:#fff;background:#5286ff}
+.route-description{border-color:transparent;background:linear-gradient(#f5f5f5,#f5f5f5) padding-box,repeating-conic-gradient(#fff000 0% 25%,transparent 0% 50%) 0 0 / 4px 4px border-box}
+body[data-view="group-rides"] .route-card .label{background:repeating-conic-gradient(#fff000 0% 25%,transparent 0% 50%) 0 0 / 4px 4px}
+:is(nav a,.brand-highlight,.day-label,.day-body,.workshop-description,.food-overview,.food-points,.food-meal h3,.food-day-title,.ride-intro,.route-card>summary,.route-description,.map-card>a,.map-card h2,.raffle-donor,.raffle-caption,.raffle-viewer,.clinic-skills,.workshop-location,.meeting-link,.bring-list mark,.workshop-meta mark,.inverse-label,.welcome-caption){opacity:var(--surface-opacity)}
+:is(.day-body,.workshop-description,.food-overview,.food-points,.ride-intro,.route-card>summary) :is(mark,.inverse-label,.label,.description-label){opacity:1}
+.clinic-arrow:before,.day-arrow:before,.welcome-enter:after{opacity:var(--surface-opacity)}
+@media(min-width:601px){
+ footer p{display:flex;align-items:baseline;justify-content:center;gap:7px;white-space:nowrap;font-size:clamp(12px,1.1vw,15px)}
+ footer .footer-date{display:inline;text-align:inherit}
+ footer .footer-date:after{content:' ·';margin-left:7px}
+}
+
+@media(min-width:601px){.paper:not(.welcome){border:2px inset #aaa;box-shadow:inset 2px 2px 4px #00000024,inset -2px -2px 3px #ffffffb3}}
+body[data-view="schedule"] #content p.schedule-note{border:1px solid var(--ink)}
+footer .footer-art{width:fit-content;max-width:100%;margin:0 auto -13px;text-align:center}
+
+/* Final annotations and accessible keyboard/motion behavior. */
+body[data-view="group-rides"] .route-card .label{background:var(--yellow)}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.welcome-caption-secondary{margin:-28px 0 0 28px;align-self:flex-start}
+.welcome-enter:after{content:none}
+.welcome-arrow{position:absolute;left:62%;top:40%;width:38%;height:1.45em;background:var(--yellow);clip-path:polygon(0 0,100% 50%,0 100%)}
+.welcome-arrow:after{content:'';position:absolute;inset:22% 25% 22% 15%;background:#000;clip-path:polygon(0 0,100% 50%,0 100%)}
+@media(min-width:601px){.welcome-caption-secondary{margin-top:-12px}.welcome-arrow{left:100%;width:clamp(100px,18vw,280px)}}
+@media(min-width:1100px){
+ .welcome-enter{font-size:clamp(10rem,16.4425svh,12.2394rem);transform:translateX(min(20.116vw,328.5px))}
+ .welcome-heading{transform:translateX(max(-243px,-14.88vw))}
+}
+:where(a,button,input,textarea,select,summary):focus-visible{outline:3px solid #111;outline-offset:4px;box-shadow:0 0 0 7px #fff}
+.skip:focus{z-index:1000}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+@media(forced-colors:active){a,button,summary{forced-color-adjust:auto}.difficulty{outline:2px solid CanvasText}.welcome-arrow{background:LinkText}.welcome-arrow:after{background:Canvas}}
+/* Allow long labels to reflow when zoomed or using larger text. */
+.workshop-presenters .presenter{white-space:normal}
+.workshop-title,.route-card .label,.workshop-meta{overflow-wrap:anywhere}
+@media(max-width:350px){.brand{font-size:clamp(1.5rem,9vw,2.1rem)}.brand .brand-highlight{font-size:.75rem}.clinic-card .workshop-meta mark{white-space:normal}}
+.raffle-controls{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 24px}
+.raffle-controls button{font:1rem/1.3 Arial,sans-serif;min-height:44px;padding:8px 14px;background:#fff;color:#111;border:2px solid #111;cursor:pointer}
+
+.day summary h2.day-label{font:inherit;margin:0}
+summary h2.workshop-title,summary h3.workshop-title{font-weight:400;margin:0}
+/* Darker blue supports small white text, including the trail guidance. */
+.trail-word-blue,.clinic-card[data-level="intermediate"] .terrain{background:#1558a8;color:#fff}
+body[data-view="workshops"] .meeting-link{background:#315cc4;color:#fff}
+.welcome-heading{opacity:1}
+@media(max-width:600px){.welcome-caption-secondary{max-width:calc(100% - 28px)}}
+
+.map-description{margin-top:12px;text-align:left;background:#fff;padding:12px;font:16px/1.5 Arial,sans-serif}.map-description summary{cursor:pointer;min-height:28px}.map-description p{padding:0;font:inherit}
+
+#raffle-showcase-title{position:relative;z-index:1;width:fit-content;max-width:calc(100% - 32px);margin:0 16px -5px;padding:0 2px;color:#fff;background:#000;font:1.75rem/1.1 var(--pixel)}
+
+@media(max-width:600px){.welcome-caption-secondary{margin-left:min(132px,calc(100% - 192px));max-width:calc(100% - min(132px,calc(100% - 192px)))}}
+.squirrel-feature{margin:24px 0}.squirrel-feature img{display:block;width:100%;height:auto}.squirrel-feature figcaption{font:16px/1.5 Arial,sans-serif;background:#fff;padding:10px;margin-top:8px}
+.clinic-coach{display:inline-block;justify-self:start;grid-column:1/-1;background:#111;color:#fff;padding:10px 16px;min-height:44px;font:1.2rem/1.2 var(--pixel);text-decoration:underline}
+
+.shady-grove-logo{display:block;width:180px;max-width:100%;margin-bottom:8px}.shady-grove-logo img{display:block;width:100%;height:auto}
+
+body[data-view="on-bike-clinics"] #page-title{font-weight:600}
+.brand .brand-highlight{border-left:2px solid var(--ink)}
+.welcome-heading{opacity:.53}
+
+/* Smaller labels across all three days; retain compact spacing on mobile. */
+.day summary{font-size:clamp(2.85rem,14vw,3.125rem)}
+@media(min-width:601px){.day summary{margin-bottom:-18px;min-height:72.26px}}
+
+/* Standalone story uses the splash artwork, with a responsive editorial layout. */
+.paper.squirrel-page{width:100%;max-width:none;margin:0;min-height:100svh;border:0;box-shadow:none}
+.squirrel-page:before{opacity:.9}
+.squirrel-page:after{opacity:.9}
+.squirrel-page .inner{max-width:1500px;padding:clamp(24px,4vw,64px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto 1fr auto;gap:24px 48px;align-items:start}
+.squirrel-page h1{grid-column:2;grid-row:1;background:#111;color:#fff;width:fit-content;padding:6px 10px;font-size:clamp(2rem,3vw,3rem)}
+.squirrel-page .squirrel-feature{grid-column:1;grid-row:1/4;margin:0}
+.squirrel-page .squirrel-essay{grid-column:2;grid-row:2;min-height:320px;margin:0;padding:24px;border:2px solid #111;background:#fffdf2;font:18px/1.65 Arial,sans-serif;white-space:pre-wrap;overflow-wrap:anywhere}
+.squirrel-page .inner>a{grid-column:2;grid-row:3;justify-self:start;background:var(--yellow);border:2px solid #111;padding:10px 14px}
+@media(max-width:700px){
+ .squirrel-page .inner{display:flex;flex-direction:column;gap:24px;padding:24px 18px}
+ .squirrel-page h1{order:0}.squirrel-page .squirrel-feature{order:1;width:100%}.squirrel-page .squirrel-essay{order:2;width:100%;min-height:220px}.squirrel-page .inner>a{order:3}
+}
+/* Desktop splash fits the viewport through sizing rather than clipping content. */
+@media(min-width:601px){
+ .welcome .inner{height:100svh;min-height:0;display:block;padding:0}
+ .welcome:before{top:0;height:100%;background-size:cover}
+ .welcome:after{display:none}
+ .welcome-caption{position:absolute;top:32px;left:clamp(24px,4vw,64px);margin:0}
+ .welcome-caption-secondary{top:88px;left:calc(clamp(24px,4vw,64px) + 28px);margin:0}
+ .welcome-enter{position:absolute;top:17svh;left:auto;right:calc(clamp(100px,18vw,280px) + 24px);width:min(392px,40vw);max-width:none;margin:0;transform:none;font-size:clamp(3rem,min(13.3svh,15vw),12.2394rem);line-height:1.04}
+ .welcome-heading{position:absolute;top:auto;left:auto;right:24px;bottom:24px;width:min(392.08px,35vw);height:auto;max-height:18svh;padding-top:0;margin:0;transform:none;object-fit:contain}
+}
+
+@media(min-width:601px) and (max-height:600px){
+ .welcome-caption{top:16px;font-size:1rem;padding:6px 10px}.welcome-caption-secondary{top:54px}
+ .welcome-enter{top:100px;font-size:min(10svh,15vw)}
+ .welcome-heading{bottom:16px;max-height:14svh}
+}
+
+.squirrel-feature img{opacity:.9}
+
+/* Match the outer canvas across guide pages and viewport sizes. */
+body{background:#F8FAFE}
+
+@media(max-width:600px){.grit-bg:before{background-image:url('assets/grit-screenprint-mobile.webp')}}
+
+body{background:#aaa7a9}
+/* Remove the desktop guide gap without a negative body offset on mobile. */
+body[data-view]>.paper{margin-top:0}
+.raffle-empty.is-art img{width:100%;max-width:100%;height:100%;object-fit:contain}
+.raffle-empty.is-art p{display:none}
+
+body[data-view="raffle"] #page-content > .page-intro{background-color:#fafafa}
+
+/* A slightly wider art frame keeps the complete headline inside the crop. */
+.raffle-screen:has(.raffle-empty.is-art:not([hidden])){aspect-ratio:1.2}
+.raffle-empty.is-art{width:100%;height:100%;min-height:0;padding:0;overflow:hidden}
+.raffle-empty.is-art img{display:block;width:100%;height:100%;object-fit:cover;object-position:28% center}
+body[data-view] #page-content > .page-intro{background-color:#fafafa}
