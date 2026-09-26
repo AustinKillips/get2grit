@@ -1117,7 +1117,31 @@ window.GRIT_COPY = {
         "path": "div:nth-of-type(2) > p:nth-of-type(1)",
         "index": 0,
         "value": "this is the schedule. we have a lot of things for you to do! So many things actually that it seems it would be impossible to do them all!",
-        "label": "this is the schedule. we have a lot of things for you to do! So many things actually that seems it w"
+        "label": "this is the schedule. we have a lot of things for you to do! So many things actually that it seems i"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > section:nth-of-type(1) > h2:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > section:nth-of-type(1) > h2:nth-of-type(1)",
+        "index": 0,
+        "value": "MEET HERE:",
+        "label": "MEET HERE:"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > section:nth-of-type(1) > p:nth-of-type(1) > a:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > section:nth-of-type(1) > p:nth-of-type(1) > a:nth-of-type(1)",
+        "index": 0,
+        "value": "Lake Leatherwood",
+        "label": "Lake Leatherwood"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > section:nth-of-type(1) > p:nth-of-type(1) > a:nth-of-type(1)|2",
+        "root": 0,
+        "path": "div:nth-of-type(2) > section:nth-of-type(1) > p:nth-of-type(1) > a:nth-of-type(1)",
+        "index": 2,
+        "value": "1303 Co Rd 204, Eureka Springs, AR 72632",
+        "label": "1303 Co Rd 204, Eureka Springs, AR 72632"
       },
       {
         "id": "0|div:nth-of-type(2) > p:nth-of-type(2)|0",
@@ -2049,7 +2073,7 @@ window.GRIT_COPY = {
         "path": "div:nth-of-type(2) > p:nth-of-type(1)",
         "index": 0,
         "value": "this is a camping event!! You need to bring something to sleep in! ",
-        "label": "this is a camping event!! You need to bring a sleeping vestibule!"
+        "label": "this is a camping event!! You need to bring something to sleep in!"
       },
       {
         "id": "0|div:nth-of-type(2) > section:nth-of-type(1) > h2:nth-of-type(1)|0",
@@ -2073,7 +2097,7 @@ window.GRIT_COPY = {
         "path": "div:nth-of-type(2) > section:nth-of-type(1) > p:nth-of-type(2)",
         "index": 0,
         "value": "If you would like to camp in a large field that is an option! \n\nIf you would like to camp in a more secluded spot...that is also an option! \n\nThere is plenty of camping and it’s all included in your ticket!",
-        "label": "If you would like to camp in a large field that is an option! If you would like to camp in a more se"
+        "label": "If you would like to camp in a large field that is an option! \n\nIf you would like to camp in a more "
       }
     ]
   },

@@ -59,6 +59,12 @@ window.GRIT_CONTENT = {
           "link": "on-bike-clinics"
         },
         {
+          "time": "10:00AM - 10:45AM",
+          "title": "Rush Running Trail Jaunt",
+          "description": "The homies at Rush Running are hosting a run in the morning! Get a stamp for your manifest while you shake out the legs!",
+          "link": ""
+        },
+        {
           "time": "10:00AM -5:00PM",
           "title": "Cyanotype Printing Opens",
           "description": "Cyanotype Prints graciously presented by Silver House - NWA's soon to open community darkroom!\n\n- Bring an garment or bag to print on! \nor\n- Buy a pre-printed shirt if you're too busy working on your manifest!",
