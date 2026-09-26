@@ -659,10 +659,10 @@ body[data-view="raffle"] .section-head{margin-top:-21px}
 /* All raffle slides occupy the same frame, including the opening artwork. */
 .raffle-screen,.raffle-screen:has(.raffle-empty.is-art:not([hidden])){aspect-ratio:1.2;position:relative}
 .raffle-empty.is-art{position:absolute;inset:0}
-.raffle-frame>.raffle-purchase{margin:0 0 12px;padding:10px}
+.raffle-frame>.raffle-purchase{margin:0;padding:10px;min-height:104px;display:flex;align-items:center}
 .raffle-frame>.raffle-purchase h2{font-size:1.4rem;margin-bottom:6px}
-.raffle-frame>.raffle-purchase .raffle-purchase-body{padding:0}
-.raffle-frame>.raffle-purchase .raffle-buy{padding:10px;font-size:1.25rem}
+.raffle-frame>.raffle-purchase .raffle-purchase-body{padding:0;width:100%}
+.raffle-frame>.raffle-purchase .raffle-buy{margin:0;padding:10px;font-size:1.25rem}
 /* Fit the splash composition to the visible viewport, including landscape phones. */
 html:has(.welcome),body:has(.welcome){height:100%;margin:0;overflow:hidden}
 .paper.welcome{width:100%;max-width:none;height:100dvh;min-height:0;margin:0;overflow:hidden}
@@ -680,3 +680,10 @@ html:has(.welcome),body:has(.welcome){height:100%;margin:0;overflow:hidden}
  .welcome-arrow{width:21vw}
  .welcome-heading{right:4vw;width:92vw}
 }
+
+/* Draw the symbols at the triangles' visual centers, independent of font metrics. */
+.day-arrow:after{content:"";position:absolute;left:33.333%;top:50%;width:18px;height:18px;transform:translate(-50%,-50%);background:linear-gradient(currentColor,currentColor) center/100% 3px no-repeat,linear-gradient(currentColor,currentColor) center/3px 100% no-repeat}
+.day[open] .day-arrow:after{content:"";left:50%;top:33.333%;background:linear-gradient(currentColor,currentColor) center/100% 3px no-repeat}
+/* Crossfade the opening print into its repeat instead of exposing a hard edge. */
+body[data-view]>.grit-bg:before{mask-image:linear-gradient(to bottom,#000 calc(100% - 140px),transparent calc(100% - 2px))}
+body[data-view]>.grit-bg:after{top:calc(100cqw * 9490 / 5810 - 140px);background-position:calc(var(--u) * 2200) calc(var(--u) * 1816 - 140px);mask-image:linear-gradient(to bottom,transparent,#000 140px)}

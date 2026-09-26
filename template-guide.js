@@ -38,8 +38,13 @@ function scheduleDescription(text){
  }).join('');
  return linked(text);
 }
+function defaultScheduleDay(now = new Date()){
+ return now.getFullYear() === 2026 && now.getMonth() === 9 && [3,4].includes(now.getDate())
+  ? (now.getDate() === 3 ? 'saturday' : 'sunday') : 'friday';
+}
 function renderSchedule(){
- return window.GRIT_CONTENT.schedule.map(d=>`<details class="day"><summary><h2 class="day-label">${escapeText(d.name.toLowerCase())}</h2><span class="day-arrow" aria-hidden="true"></span></summary><div class="day-body"><p class="day-date">${escapeText(d.date)}</p>${d.events.map(e=>event(escapeText(e.time),escapeText(e.title).replace(/^No-Drop Lake Leatherwood XC Ride departs$/i, title=>`<a href="https://ridewithgps.com/routes/56614525" target="_blank" rel="noopener">${title}</a>`).replace(/Dr\. J\.? Maniac/i, name=>`<a href="https://www.instagram.com/jasmanias_clubhouse/?hl=en" target="_blank" rel="noopener">${name}</a>`),scheduleDescription(e.description),escapeText(e.link||''))).join('')}</div></details>`).join('');
+ const selectedDay = defaultScheduleDay();
+ return window.GRIT_CONTENT.schedule.map(d=>`<details class="day"${d.name.toLowerCase() === selectedDay ? ' open' : ''}><summary><h2 class="day-label">${escapeText(d.name.toLowerCase())}</h2><span class="day-arrow" aria-hidden="true"></span></summary><div class="day-body"><p class="day-date">${escapeText(d.date)}</p>${d.events.map(e=>event(escapeText(e.time),escapeText(e.title).replace(/^No-Drop Lake Leatherwood XC Ride departs$/i, title=>`<a href="https://ridewithgps.com/routes/56614525" target="_blank" rel="noopener">${title}</a>`).replace(/Dr\. J\.? Maniac/i, name=>`<a href="https://www.instagram.com/jasmanias_clubhouse/?hl=en" target="_blank" rel="noopener">${name}</a>`),scheduleDescription(e.description),escapeText(e.link||''))).join('')}</div></details>`).join('');
 }
 let cleanupRaffle=()=>{};
 const titles={'scavenger-hunt':'scavenger hunt','raffle':'raffle','schedule':'schedule','maps':'maps','group-rides':'routes','on-bike-clinics':'CLINICS','workshops':'expo','food':'food'};
