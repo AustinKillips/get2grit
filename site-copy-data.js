@@ -1127,6 +1127,912 @@ window.GRIT_COPY = {
         "value": "Tentative schedule. Subject to minor revisions.",
         "label": "Tentative schedule. Subject to minor revisions."
       }
+    ],
+    "food": [
+      {
+        "id": "0|div:nth-of-type(1) > h1:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(1) > h1:nth-of-type(1)",
+        "index": 0,
+        "value": "food",
+        "label": "food"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > p:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > p:nth-of-type(1)",
+        "index": 0,
+        "value": "thank you to honorary grit fest winner brendan haren for solving the food question AND our amazing friends selling coffee, baked goods, and lunch!",
+        "label": "thank you to honorary grit fest winner brendan haren for solving the food question AND our amazing f"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > aside:nth-of-type(1) > h2:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > aside:nth-of-type(1) > h2:nth-of-type(1)",
+        "index": 0,
+        "value": "TL;DR",
+        "label": "TL;DR"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > aside:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > aside:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1)",
+        "index": 0,
+        "value": "We're making dinner and a light breakfast each morning.",
+        "label": "We're making dinner and a light breakfast each morning."
+      },
+      {
+        "id": "0|div:nth-of-type(2) > aside:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > aside:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2)",
+        "index": 0,
+        "value": "Lunch is on you.",
+        "label": "Lunch is on you."
+      },
+      {
+        "id": "0|div:nth-of-type(2) > aside:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > aside:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3)",
+        "index": 0,
+        "value": "Coffee and baked goods are for sale Saturday and Sunday!",
+        "label": "Coffee and baked goods are for sale Saturday and Sunday!"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > aside:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(4)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > aside:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(4)",
+        "index": 0,
+        "value": "bring extra snacks. The camp store does not stock your favorite brand of plant based puffed starch treat.",
+        "label": "bring extra snacks. The camp store does not stock your favorite brand of plant based puffed starch t"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(1) > summary:nth-of-type(1) > h2:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(1) > summary:nth-of-type(1) > h2:nth-of-type(1)",
+        "index": 0,
+        "value": "Friday",
+        "label": "Friday"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > h3:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > h3:nth-of-type(1)",
+        "index": 0,
+        "value": "LUNCH",
+        "label": "LUNCH"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > strong:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > strong:nth-of-type(1)",
+        "index": 0,
+        "value": "Bring a lunch!",
+        "label": "Bring a lunch!"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1)",
+        "index": 0,
+        "value": "Some favorites in town include:",
+        "label": "Some favorites in town include:"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > a:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > a:nth-of-type(1)",
+        "index": 0,
+        "value": "Bombadils",
+        "label": "Bombadils"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > a:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > a:nth-of-type(1)",
+        "index": 0,
+        "value": "B-Side Cafe",
+        "label": "B-Side Cafe"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > a:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > a:nth-of-type(1)",
+        "index": 0,
+        "value": "So-Good Kitchen",
+        "label": "So-Good Kitchen"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(4) > a:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(4) > a:nth-of-type(1)",
+        "index": 0,
+        "value": "Harolds Diner",
+        "label": "Harolds Diner"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(2) > span:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(2) > span:nth-of-type(1)",
+        "index": 0,
+        "value": "TIME",
+        "label": "TIME"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(2)|1",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(2)",
+        "index": 1,
+        "value": "TBA",
+        "label": "TBA"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(2) > h3:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(2) > h3:nth-of-type(1)",
+        "index": 0,
+        "value": "DINNER",
+        "label": "DINNER"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > strong:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > strong:nth-of-type(1)",
+        "index": 0,
+        "value": "Will be served. Probably Pizza. TBD",
+        "label": "Will be served. Probably Pizza. TBD"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)",
+        "index": 0,
+        "value": "Vegan + GF + DF options!",
+        "label": "Vegan + GF + DF options!"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(1)",
+        "index": 0,
+        "value": "TIME",
+        "label": "TIME"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2)|1",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2)",
+        "index": 1,
+        "value": "6:30pm",
+        "label": "6:30pm"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(1)",
+        "index": 0,
+        "value": "COST",
+        "label": "COST"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(3)|1",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(1) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(3)",
+        "index": 1,
+        "value": "Free!",
+        "label": "Free!"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > summary:nth-of-type(1) > h2:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > summary:nth-of-type(1) > h2:nth-of-type(1)",
+        "index": 0,
+        "value": "Saturday",
+        "label": "Saturday"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > h3:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > h3:nth-of-type(1)",
+        "index": 0,
+        "value": "MORNING",
+        "label": "MORNING"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > strong:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > strong:nth-of-type(1)",
+        "index": 0,
+        "value": "Overnight Oat Bar",
+        "label": "Overnight Oat Bar"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)",
+        "index": 0,
+        "value": "Vegan + GF + DF options!",
+        "label": "Vegan + GF + DF options!"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(2)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(2)",
+        "index": 0,
+        "value": "p/b: Our beloved volunteers",
+        "label": "p/b: Our beloved volunteers"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(1)",
+        "index": 0,
+        "value": "TIME",
+        "label": "TIME"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2)|1",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2)",
+        "index": 1,
+        "value": "7:00am",
+        "label": "7:00am"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2)|3",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2)",
+        "index": 3,
+        "value": "to",
+        "label": "to"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2)|5",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2)",
+        "index": 5,
+        "value": "9:00am",
+        "label": "9:00am"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(1)",
+        "index": 0,
+        "value": "COST",
+        "label": "COST"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(3)|1",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(3)",
+        "index": 1,
+        "value": "Free!",
+        "label": "Free!"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)",
+        "index": 0,
+        "value": "Camp Coffee",
+        "label": "Camp Coffee"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(2) > span:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(2) > span:nth-of-type(1)",
+        "index": 0,
+        "value": "TIME",
+        "label": "TIME"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(2)|1",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(2)",
+        "index": 1,
+        "value": "7:00am",
+        "label": "7:00am"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(2)|3",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(2)",
+        "index": 3,
+        "value": "to",
+        "label": "to"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(2)|5",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(2)",
+        "index": 5,
+        "value": "9:00am",
+        "label": "9:00am"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(3) > span:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(3) > span:nth-of-type(1)",
+        "index": 0,
+        "value": "COST",
+        "label": "COST"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(3)|1",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(3)",
+        "index": 1,
+        "value": "$~$5-$8",
+        "label": "$3–$6"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(3) > small:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(3) > small:nth-of-type(1)",
+        "index": 0,
+        "value": "support your barista!",
+        "label": "support your barista!"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(1) > strong:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(1) > strong:nth-of-type(1)",
+        "index": 0,
+        "value": "Shady Grove Farm baked goods!",
+        "label": "Shady Grove Farm baked goods!"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(2) > span:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(2) > span:nth-of-type(1)",
+        "index": 0,
+        "value": "TIME",
+        "label": "TIME"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(2)|1",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(2)",
+        "index": 1,
+        "value": "7:00am",
+        "label": "7:00am"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(2)|3",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(2)",
+        "index": 3,
+        "value": "to",
+        "label": "to"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(2)|5",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(2)",
+        "index": 5,
+        "value": "11:00am",
+        "label": "11:00am"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(3) > span:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(3) > span:nth-of-type(1)",
+        "index": 0,
+        "value": "COST",
+        "label": "COST"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(3)|1",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(3)",
+        "index": 1,
+        "value": "$5–$10",
+        "label": "$5–$10"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(3) > small:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(3) > small:nth-of-type(1)",
+        "index": 0,
+        "value": "Support your local baker!",
+        "label": "Support your local baker!"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(2) > h3:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(2) > h3:nth-of-type(1)",
+        "index": 0,
+        "value": "LUNCH",
+        "label": "LUNCH"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > strong:nth-of-type(1) > a:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > strong:nth-of-type(1) > a:nth-of-type(1)",
+        "index": 0,
+        "value": "The Seasoned Skillet",
+        "label": "The Seasoned Skillet"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > strong:nth-of-type(1)|1",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > strong:nth-of-type(1)",
+        "index": 1,
+        "value": " is serving up soul food!",
+        "label": "is serving up soul food!"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(1)",
+        "index": 0,
+        "value": "TIME",
+        "label": "TIME"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2)|1",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2)",
+        "index": 1,
+        "value": "11–4",
+        "label": "11–4"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(1)",
+        "index": 0,
+        "value": "COST",
+        "label": "COST"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(3)|1",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(3)",
+        "index": 1,
+        "value": "$7–$20",
+        "label": "$7–$20"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > a:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > a:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)",
+        "index": 0,
+        "value": "Oh, Snap Ice Cream",
+        "label": "Oh, Snap Ice Cream"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(2) > span:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(2) > span:nth-of-type(1)",
+        "index": 0,
+        "value": "TIME",
+        "label": "TIME"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(2)|1",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(2)",
+        "index": 1,
+        "value": "All day",
+        "label": "All day"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(3) > span:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(3) > span:nth-of-type(1)",
+        "index": 0,
+        "value": "COST",
+        "label": "COST"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(3)|1",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(3)",
+        "index": 1,
+        "value": "$5–$10",
+        "label": "$5–$10"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(3) > h3:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(3) > h3:nth-of-type(1)",
+        "index": 0,
+        "value": "DINNER",
+        "label": "DINNER"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(3) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > strong:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(3) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > strong:nth-of-type(1)",
+        "index": 0,
+        "value": "Community Dinner",
+        "label": "Community Dinner"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(3) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(3) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)",
+        "index": 0,
+        "value": "Vegan + GF + DF options!",
+        "label": "Vegan + GF + DF options!"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(3) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(2)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(3) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(2)",
+        "index": 0,
+        "value": "p/b: our beloved volunteers",
+        "label": "p/b: our beloved volunteers"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(3) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(3) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(1)",
+        "index": 0,
+        "value": "TIME",
+        "label": "TIME"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(3) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2)|1",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(3) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2)",
+        "index": 1,
+        "value": "6:00pm",
+        "label": "6:00pm"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(3) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(3) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(1)",
+        "index": 0,
+        "value": "COST",
+        "label": "COST"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(3) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(3)|1",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(2) > div:nth-of-type(1) > section:nth-of-type(3) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(3)",
+        "index": 1,
+        "value": "Free!",
+        "label": "Free!"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > summary:nth-of-type(1) > h2:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > summary:nth-of-type(1) > h2:nth-of-type(1)",
+        "index": 0,
+        "value": "Sunday",
+        "label": "Sunday"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > h3:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > h3:nth-of-type(1)",
+        "index": 0,
+        "value": "MORNING",
+        "label": "MORNING"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > strong:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > strong:nth-of-type(1)",
+        "index": 0,
+        "value": "Pancakes",
+        "label": "Pancakes"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)",
+        "index": 0,
+        "value": "Vegan + GF + DF options!",
+        "label": "Vegan + GF + DF options!"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(2)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(2)",
+        "index": 0,
+        "value": "p/b: our beloved volunteers",
+        "label": "p/b: our beloved volunteers"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(1)",
+        "index": 0,
+        "value": "TIME",
+        "label": "TIME"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2)|1",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2)",
+        "index": 1,
+        "value": "6:30am",
+        "label": "6:30am"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2)|3",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2)",
+        "index": 3,
+        "value": "to",
+        "label": "to"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2)|5",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2)",
+        "index": 5,
+        "value": "8:30am",
+        "label": "8:30am"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(3) > span:nth-of-type(1)",
+        "index": 0,
+        "value": "COST",
+        "label": "COST"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(3)|1",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(3)",
+        "index": 1,
+        "value": "Free!",
+        "label": "Free!"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)",
+        "index": 0,
+        "value": "Camp Coffee",
+        "label": "Camp Coffee"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(2) > span:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(2) > span:nth-of-type(1)",
+        "index": 0,
+        "value": "TIME",
+        "label": "TIME"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(2)|1",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(2)",
+        "index": 1,
+        "value": "7:00am",
+        "label": "7:00am"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(2)|3",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(2)",
+        "index": 3,
+        "value": "to",
+        "label": "to"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(2)|5",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(2)",
+        "index": 5,
+        "value": "9:00am",
+        "label": "9:00am"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(3) > span:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(3) > span:nth-of-type(1)",
+        "index": 0,
+        "value": "COST",
+        "label": "COST"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(3)|1",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(3)",
+        "index": 1,
+        "value": "$~$5-$8",
+        "label": "$3–$6"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(3) > small:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(3) > small:nth-of-type(1)",
+        "index": 0,
+        "value": "support your barista!",
+        "label": "support your barista!"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(1) > strong:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(1) > strong:nth-of-type(1)",
+        "index": 0,
+        "value": "Shady Grove Farm baked goods!",
+        "label": "Shady Grove Farm baked goods!"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(2) > span:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(2) > span:nth-of-type(1)",
+        "index": 0,
+        "value": "TIME",
+        "label": "TIME"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(2)|1",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(2)",
+        "index": 1,
+        "value": "7:00am",
+        "label": "7:00am"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(2)|3",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(2)",
+        "index": 3,
+        "value": "to",
+        "label": "to"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(2)|5",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(2)",
+        "index": 5,
+        "value": "9:00am",
+        "label": "9:00am"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(3) > span:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(3) > span:nth-of-type(1)",
+        "index": 0,
+        "value": "COST",
+        "label": "COST"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(3)|1",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(3)",
+        "index": 1,
+        "value": "$5–$10",
+        "label": "$5–$10"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(3) > small:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(3) > small:nth-of-type(1)",
+        "index": 0,
+        "value": "Support your local baker!",
+        "label": "Support your local baker!"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(2) > h3:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(2) > h3:nth-of-type(1)",
+        "index": 0,
+        "value": "LUNCH",
+        "label": "LUNCH"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > strong:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > strong:nth-of-type(1)",
+        "index": 0,
+        "value": "Bring food to fuel your ride!",
+        "label": "Bring food to fuel your ride!"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(1)",
+        "index": 0,
+        "value": "TIME",
+        "label": "TIME"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2)|1",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2)",
+        "index": 1,
+        "value": "9:00am",
+        "label": "9:00am"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2)|3",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2)",
+        "index": 3,
+        "value": "to",
+        "label": "to"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2)|5",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(2)",
+        "index": 5,
+        "value": "~12:00pm–4:00pm",
+        "label": "~12:00pm–4:00pm"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > strong:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > strong:nth-of-type(1)",
+        "index": 0,
+        "value": "Aid stations stocked with Camp Coffee freeze pops, Skratch Hydration Mix, water, and other goodies!",
+        "label": "Aid stations stocked with Camp Coffee freeze pops, Skratch Hydration Mix, water, and other goodies!"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(2) > span:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(2) > span:nth-of-type(1)",
+        "index": 0,
+        "value": "TIME",
+        "label": "TIME"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(2)|1",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(2)",
+        "index": 1,
+        "value": "As long as you're on-course :)",
+        "label": "As long as you're on-course :)"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(1) > strong:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(1) > strong:nth-of-type(1)",
+        "index": 0,
+        "value": "Snack and refuel option available on both routes",
+        "label": "Snack and refuel option available on both routes"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(2) > span:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(2) > span:nth-of-type(1)",
+        "index": 0,
+        "value": "TIME",
+        "label": "TIME"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(2) > a:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(2) > a:nth-of-type(1)",
+        "index": 0,
+        "value": "15mi Ride: ~11:30 // mile 10.9",
+        "label": "15mi Ride: ~11:30 // mile 10.9"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(2) > a:nth-of-type(2)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(3) > div:nth-of-type(2) > a:nth-of-type(2)",
+        "index": 0,
+        "value": "30mi Ride: ~12:30 // mile 12",
+        "label": "30mi Ride: ~12:30 // mile 12"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(3) > h3:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(3) > h3:nth-of-type(1)",
+        "index": 0,
+        "value": "DINNER",
+        "label": "DINNER"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(3) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > strong:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > details:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(3) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > strong:nth-of-type(1)",
+        "index": 0,
+        "value": "Enjoy some delicious food in Eureka Springs!",
+        "label": "Enjoy some delicious food in Eureka Springs!"
+      }
     ]
   },
   "coaches": {
