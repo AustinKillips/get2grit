@@ -1,5 +1,5 @@
 const copyPage=document.querySelector('#copy-page'),copyFields=document.querySelector('#copy-fields'),copyFrame=document.querySelector('#copy-preview');
-const copyPages={'shared':'Shared header, navigation & footer','schedule':'Schedule page text','group-rides':'Routes page introduction','workshops':'Expo / workshops','on-bike-clinics':'Clinics','food':'Food','raffle':'Raffle page text','scavenger-hunt':'Scavenger hunt','maps':'Maps','welcome':'Welcome','lady-squirrel-hunter':'Lady Squirrel Hunter'};
+const copyPages={'camping':'Camping page text','shared':'Shared header, navigation & footer','schedule':'Schedule page text','group-rides':'Routes page introduction','workshops':'Expo / workshops','on-bike-clinics':'Clinics','food':'Food','raffle':'Raffle page text','scavenger-hunt':'Scavenger hunt','maps':'Maps','welcome':'Welcome','lady-squirrel-hunter':'Lady Squirrel Hunter'};
 for(const [key,label] of Object.entries(copyPages)){const o=el('option',label);o.value=key;copyPage.append(o)}
 let requestedCopyPage='';
 function loadCopyPage(){if(!state)return;requestedCopyPage=copyPage.value;copyFields.textContent='Loading page text…';const key=requestedCopyPage;copyFrame.src=['welcome','lady-squirrel-hunter'].includes(key)?`${key}.html?cms=1`:`index.html?cms=1#${key==='shared'?'schedule':key}`;}

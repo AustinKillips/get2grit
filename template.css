@@ -406,7 +406,7 @@ body[data-view="on-bike-clinics"] .meeting-link{background:#4d58ff;color:#fff}
 .welcome-heading{position:relative;left:auto;top:auto;width:100%;height:auto;transform:none;opacity:.63}
 .welcome-caption{position:static;max-width:100%;align-self:flex-start;display:inline-block;padding:10px 14px;border:2px solid #111;background:var(--yellow);font:1.4rem/1.2 var(--pixel);text-decoration:none}
 
-#bike-guidance-title,#meeting-title{color:#fff;background:#000;width:fit-content;padding:0 2px}
+#bike-guidance-title,#meeting-title,#camping-info-title{color:#fff;background:#000;width:fit-content;padding:0 2px}
 .route-card>summary{background:#a19b9b}
 .day-body{background:linear-gradient(rgb(245 245 245 / .9),rgb(245 245 245 / .9)) padding-box,repeating-conic-gradient(#0000ff 0% 25%,#f17fba 0% 50%) 0 0 / 4px 4px border-box}
 body[data-view="workshops"] .workshop-meta>span{font-size:1.775rem}
@@ -510,7 +510,7 @@ footer .footer-art{margin:0 0 18px}
 /* Shared map labels sit against their frames at every viewport width. */
 .map-card h2{font-size:30px;margin:0 18.55px -5px;max-width:calc(100% - 37.1px);z-index:1}
 footer .footer-art{margin:0 0 -13px min(62px,16vw)}
-#bike-guidance-title,#meeting-title{margin-top:-31px;margin-right:-40px;margin-left:-5px}
+#bike-guidance-title,#meeting-title,#camping-info-title{margin-top:-31px;margin-right:-40px;margin-left:-5px}
 .punk-truck-stop .workshop-description{background:repeating-conic-gradient(#ffea00 0% 25%,transparent 0% 50%) 0 0 / 4px 4px}
 .clinic-card[data-level="first-touch"]{--clinic-color:#ff1745}
 .clinic-card[data-level="beginner"]{--clinic-color:#70ce69}
