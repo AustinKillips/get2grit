@@ -98,6 +98,14 @@ window.GRIT_COPY = {
         "label": "maps"
       },
       {
+        "id": "0|nav:nth-of-type(1) > a:nth-of-type(9)|0",
+        "root": 0,
+        "path": "nav:nth-of-type(1) > a:nth-of-type(9)",
+        "index": 0,
+        "value": "register",
+        "label": "register"
+      },
+      {
         "id": "1|a:nth-of-type(1)|0",
         "root": 1,
         "path": "a:nth-of-type(1)",
@@ -408,7 +416,7 @@ window.GRIT_COPY = {
         "root": 0,
         "path": "div:nth-of-type(2) > section:nth-of-type(1) > div:nth-of-type(1) > details:nth-of-type(4) > summary:nth-of-type(1) > h3:nth-of-type(1)",
         "index": 0,
-        "value": "Punk Truck Stop",
+        "value": "",
         "label": "Punk Truck Stop"
       },
       {
@@ -416,7 +424,7 @@ window.GRIT_COPY = {
         "root": 0,
         "path": "div:nth-of-type(2) > section:nth-of-type(1) > div:nth-of-type(1) > details:nth-of-type(4) > summary:nth-of-type(1) > span:nth-of-type(2) > span:nth-of-type(1) > span:nth-of-type(1)",
         "index": 0,
-        "value": "TIME:",
+        "value": "",
         "label": "TIME:"
       },
       {
@@ -424,7 +432,7 @@ window.GRIT_COPY = {
         "root": 0,
         "path": "div:nth-of-type(2) > section:nth-of-type(1) > div:nth-of-type(1) > details:nth-of-type(4) > summary:nth-of-type(1) > span:nth-of-type(2) > span:nth-of-type(1) > mark:nth-of-type(1)",
         "index": 0,
-        "value": "10:00–5:00PM",
+        "value": "",
         "label": "10:00–5:00PM"
       },
       {
@@ -432,7 +440,7 @@ window.GRIT_COPY = {
         "root": 0,
         "path": "div:nth-of-type(2) > section:nth-of-type(1) > div:nth-of-type(1) > details:nth-of-type(4) > summary:nth-of-type(1) > span:nth-of-type(3) > span:nth-of-type(1)",
         "index": 0,
-        "value": "MERCHANT:",
+        "value": "",
         "label": "MERCHANT:"
       },
       {
@@ -440,7 +448,7 @@ window.GRIT_COPY = {
         "root": 0,
         "path": "div:nth-of-type(2) > section:nth-of-type(1) > div:nth-of-type(1) > details:nth-of-type(4) > summary:nth-of-type(1) > span:nth-of-type(3) > span:nth-of-type(2)",
         "index": 0,
-        "value": "a local punk",
+        "value": "",
         "label": "a local punk"
       },
       {
@@ -448,7 +456,7 @@ window.GRIT_COPY = {
         "root": 0,
         "path": "div:nth-of-type(2) > section:nth-of-type(1) > div:nth-of-type(1) > details:nth-of-type(4) > summary:nth-of-type(1) > a:nth-of-type(1)",
         "index": 0,
-        "value": "DROP IN",
+        "value": "",
         "label": "DROP IN"
       },
       {
@@ -456,7 +464,7 @@ window.GRIT_COPY = {
         "root": 0,
         "path": "div:nth-of-type(2) > section:nth-of-type(1) > div:nth-of-type(1) > details:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)",
         "index": 0,
-        "value": "Details",
+        "value": "",
         "label": "Details"
       },
       {
@@ -464,7 +472,7 @@ window.GRIT_COPY = {
         "root": 0,
         "path": "div:nth-of-type(2) > section:nth-of-type(1) > div:nth-of-type(1) > details:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1)",
         "index": 0,
-        "value": "The punk truck stop is a load bearing piece of cultural and social infrastructure in Northwest Arkansas. They sell a variety of wares and ensure that live music acts have a space to perform that will not induce psychic damage.",
+        "value": "",
         "label": "The punk truck stop is a load bearing piece of cultural and social infrastructure in Northwest Arkan"
       },
       {
