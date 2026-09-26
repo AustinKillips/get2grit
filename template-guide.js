@@ -103,6 +103,10 @@ function render(){
  });
  document.querySelector('#content').setAttribute('aria-labelledby','page-title');
  window.GritCopy?.apply();
+ if(key==='group-rides'&&!new URLSearchParams(location.search).has('cms')){
+  const video=document.querySelector('.bike-video em');
+  if(video){const link=document.createElement('a');link.href='https://www.instagram.com/reel/DdVLap5TwqI/';link.target='_blank';link.rel='noopener';link.textContent=video.textContent;video.replaceChildren(link);}
+ }
  if(key==='maps'&&!new URLSearchParams(location.search).has('cms')){
   const intro=document.querySelector('.page-intro');
   intro.innerHTML=escapeText(intro.textContent).replace(/\bBird\b/g,'<a href="https://www.instagram.com/wheelmouse/" target="_blank" rel="noopener">Bird</a>');
