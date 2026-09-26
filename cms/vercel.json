@@ -1,0 +1,1 @@
+{"buildCommand":"npm run build","outputDirectory":"public","rewrites":[{"source":"/api/:path*","destination":"/api/handler"}],"headers":[{"source":"/admin.html","headers":[{"key":"Cache-Control","value":"no-store"},{"key":"X-Frame-Options","value":"DENY"}]}]}

@@ -1,0 +1,4 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {seal,unseal,validate} from './security.js';
+const key='ab'.repeat(32);
+test('sessions reject tampering, incorrect keys and expiry',()=>{const token=seal({token:'test',exp:Date.now()+10000},key);assert.equal(unseal(token,key).token,'test');assert.equal(unseal(token.slice(0,-8)+'AAAAAAAA',key),null);assert.equal(unseal(token,'cd'.repeat(32)),null);assert.equal(unseal(seal({exp:0},key),key),null)});
+test('content validation rejects path traversal and unsafe checkout URLs',()=>{const data={schedule:[],rides:[],copy:{pages:{},coaches:{}},raffle:{prizes:[{images:['assets/../secret']}]}};assert.throws(()=>validate(data));data.raffle.prizes=[];data.raffle.purchaseUrl='javascript:alert(1)';assert.throws(()=>validate(data));data.raffle.purchaseUrl='https://givebutter.com/grit2026';validate(data)});
