@@ -6,7 +6,9 @@ window.mountRaffle = function(root,sponsorLinks={}) {
  config.prizes.forEach(prize=>{
   (prize.images.length?prize.images:[null]).forEach((image,variant)=>slides.push({...prize,image,variant}));
  });
- root.innerHTML=`<section class="raffle-showcase" aria-labelledby="raffle-showcase-title"><h2 id="raffle-showcase-title">First Annual Sixth Grit Fest Raffle for the cure</h2><div class="raffle-frame"><div class="raffle-screen"><img class="raffle-prize-image" hidden alt=""><div class="raffle-empty"><img src="assets/abw-cow-2.svg" alt=""><p>GOOD THINGS<br>ARE HERE</p></div></div><div class="raffle-caption"><h3></h3></div></div><div class="raffle-donor"><div class="raffle-donor-inner"><span>DONATED BY:</span><a class="raffle-sponsor-link" target="_blank" rel="noopener"><img hidden alt=""><strong></strong></a><img class="raffle-supporters" src="assets/we-love-our-supporters.svg" alt="We love our supporters" hidden><span class="raffle-thanks">thank you</span></div></div></section><div class="raffle-controls"><button type="button" class="raffle-pause">Pause animation</button><button type="button" class="raffle-next">Next prize</button></div><p class="sr-only raffle-status" role="status"></p><section class="raffle-purchase"><h2>GET YOUR TICKETS</h2><div class="raffle-purchase-body"><givebutter-widget id="LYOqoo"></givebutter-widget></div></section><picture class="raffle-footer-art"><source media="(prefers-reduced-motion: reduce)" srcset="assets/raffle-footer-still.webp"><img src="assets/raffle-footer-still.webp" width="720" height="378" loading="lazy" alt="I got to GRIT and all I won was the whole damn event. We love our sponsors."></picture>`;
+ root.innerHTML=`<section class="raffle-showcase" aria-labelledby="raffle-showcase-title"><h2 id="raffle-showcase-title">First Annual Sixth Grit Fest Raffle for the cure</h2><div class="raffle-frame"><div class="raffle-screen"><img class="raffle-prize-image" hidden alt=""><div class="raffle-empty"><img src="assets/abw-cow-2.svg" alt=""><p>GOOD THINGS<br>ARE HERE</p></div></div><div class="raffle-caption"><h3></h3></div></div><div class="raffle-donor"><div class="raffle-donor-inner"><span>DONATED BY:</span><a class="raffle-sponsor-link" target="_blank" rel="noopener"><img hidden alt=""><strong></strong></a><img class="raffle-supporters" src="assets/we-love-our-supporters.svg" alt="We love our supporters" hidden><span class="raffle-thanks">thank you</span></div></div></section><div class="raffle-controls"><button type="button" class="raffle-pause">Pause animation</button><button type="button" class="raffle-next">Next prize</button></div><p class="sr-only raffle-status" role="status"></p><section class="raffle-purchase"><h2>GET YOUR TICKETS</h2><div class="raffle-purchase-body"><a class="raffle-buy" target="_blank" rel="noopener" hidden>Buy raffle tickets on Givebutter ↗</a></div></section>`;
+ const ticketLink=root.querySelector('.raffle-buy');
+ if(/^https:\/\//i.test(config.purchaseUrl||'')){ticketLink.href=config.purchaseUrl;ticketLink.hidden=false;}else{root.querySelector('.raffle-purchase').hidden=true;}
  const image=root.querySelector('.raffle-prize-image');
  const title=root.querySelector('.raffle-caption h3');
  const donor=root.querySelector('.raffle-donor');
@@ -33,8 +35,7 @@ window.mountRaffle = function(root,sponsorLinks={}) {
  const pauseButton=root.querySelector('.raffle-pause');
  const nextButton=root.querySelector('.raffle-next');
  const status=root.querySelector('.raffle-status');
- const footerImage=root.querySelector('.raffle-footer-art img');
- function syncMotion(){pauseButton.textContent=paused?'Play animation':'Pause animation';footerImage.src=paused?'assets/raffle-footer-still.webp':'assets/raffle-footer.webp';}
+ function syncMotion(){pauseButton.textContent=paused?'Play animation':'Pause animation';}
  function nextSlide(){
   if(!slides.length)return {interlude:true};
   if(shown===5){shown=0;return {interlude:true}}

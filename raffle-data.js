@@ -1,6 +1,6 @@
 window.GRIT_RAFFLE = {
   "templateUrl": "https://givebutter.com/abw-x-baphomet-raffle-bike-d0qq2q",
-  "purchaseUrl": "",
+  "purchaseUrl": "https://givebutter.com/grit2026",
   "prizes": [
     {
       "name": "Set of New Car Tires!!!",
