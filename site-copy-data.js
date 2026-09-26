@@ -2033,6 +2033,48 @@ window.GRIT_COPY = {
         "value": "Enjoy some delicious food in Eureka Springs!",
         "label": "Enjoy some delicious food in Eureka Springs!"
       }
+    ],
+    "camping": [
+      {
+        "id": "0|div:nth-of-type(1) > h1:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(1) > h1:nth-of-type(1)",
+        "index": 0,
+        "value": "camping",
+        "label": "camping"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > p:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > p:nth-of-type(1)",
+        "index": 0,
+        "value": "this is a camping event!! You need to bring something to sleep in! ",
+        "label": "this is a camping event!! You need to bring a sleeping vestibule!"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > section:nth-of-type(1) > h2:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > section:nth-of-type(1) > h2:nth-of-type(1)",
+        "index": 0,
+        "value": "Camping Info",
+        "label": "Camping Info"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > section:nth-of-type(1) > p:nth-of-type(1)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > section:nth-of-type(1) > p:nth-of-type(1)",
+        "index": 0,
+        "value": "We have almost all of the camp spots reserved at Lake Leatherwood. We’ll steer you away from the 3 or so that are reserved for other folks when you arrive.",
+        "label": "We have almost all of the camp spots reserved at Lake Leatherwood. We’ll steer you away from the 3 o"
+      },
+      {
+        "id": "0|div:nth-of-type(2) > section:nth-of-type(1) > p:nth-of-type(2)|0",
+        "root": 0,
+        "path": "div:nth-of-type(2) > section:nth-of-type(1) > p:nth-of-type(2)",
+        "index": 0,
+        "value": "If you would like to camp in a large field that is an option! If you would like to camp in a more secluded spot...that is also an option! There is plenty of camping and it’s all included in your ticket!",
+        "label": "If you would like to camp in a large field that is an option! If you would like to camp in a more se"
+      }
     ]
   },
   "coaches": {
