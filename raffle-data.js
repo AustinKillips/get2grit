@@ -284,6 +284,14 @@ window.GRIT_RAFFLE = {
         "assets/admin-uploads/6815276bd699473abf793b80e4a65f5f.jpg",
         "assets/admin-uploads/041d9308f84041fcafa4c9ff10906c05-fast.webp"
       ]
+    },
+    {
+      "name": "Sunnies",
+      "donor": "",
+      "logo": "",
+      "images": [
+        "assets/admin-uploads/58bf73509b9fc8ca1cb9231ec3f2674b.webp"
+      ]
     }
   ]
 };

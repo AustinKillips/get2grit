@@ -7,7 +7,7 @@ window.GRIT_CONTENT = {
         {
           "time": "1:00PM",
           "title": "Check-in Opens",
-          "description": "Fill out yer waiver, snag your manifest, and get settled for a weekend of shenanigans!",
+          "description": "Fill out your waiver, snag your manifest, and get settled for a weekend of shenanigans!",
           "link": ""
         },
         {
@@ -37,7 +37,7 @@ window.GRIT_CONTENT = {
         {
           "time": "6:30",
           "title": "Dinner is served",
-          "description": "I promise there will be food I just don't know what it is yet!",
+          "description": "I'm aiming to have a lot of pizzas. \n\nThere will be allergy friendly options. I am a woman with allergies and get it. ",
           "link": ""
         }
       ]
@@ -49,7 +49,7 @@ window.GRIT_CONTENT = {
         {
           "time": "7:00AM-9:00AM",
           "title": "Breakfast + Coffee + Baked Goods",
-          "description": "On the house - Overnight Oats Bar p/b by our amazing volunteers\nFor Sale - Camp Coffee\nFor Sale - Shady Grove Farm Bakery",
+          "description": "Free - Overnight Oats Bar p/b by our amazing volunteers\nFor Sale - Camp Coffee\nFor Sale - Shady Grove Farm Bakery",
           "link": "food"
         },
         {
@@ -109,7 +109,7 @@ window.GRIT_CONTENT = {
         {
           "time": "7:00-8:30AM",
           "title": "Breakfast",
-          "description": "On the house - Pancakes p/b by our amazing volunteers\nFor Sale - Camp Coffee\nFor Sale - Shady Grove Farm Bakery",
+          "description": "Free - Pancakes p/b by our amazing volunteers\nFor Sale - Camp Coffee\nFor Sale - Shady Grove Farm Bakery",
           "link": "food"
         },
         {
