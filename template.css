@@ -659,7 +659,7 @@ body[data-view="raffle"] .section-head{margin-top:-21px}
 /* All raffle slides occupy the same frame, including the opening artwork. */
 .raffle-screen,.raffle-screen:has(.raffle-empty.is-art:not([hidden])){aspect-ratio:1.2;position:relative}
 .raffle-empty.is-art{position:absolute;inset:0}
-.raffle-frame>.raffle-purchase{margin:0;padding:10px;min-height:104px;display:flex;align-items:center}
+.raffle-frame>.raffle-purchase{margin:0;padding:10px;min-height:0;display:flex;align-items:center;border:1px solid #111;background:repeating-conic-gradient(var(--yellow) 0% 25%,#fff8a6 0% 50%) 0 0 / 4px 4px}
 .raffle-frame>.raffle-purchase h2{font-size:1.4rem;margin-bottom:6px}
 .raffle-frame>.raffle-purchase .raffle-purchase-body{padding:0;width:100%}
 .raffle-frame>.raffle-purchase .raffle-buy{margin:0;padding:10px;font-size:1.25rem}
@@ -687,3 +687,7 @@ html:has(.welcome),body:has(.welcome){height:100%;margin:0;overflow:hidden}
 /* Crossfade the opening print into its repeat instead of exposing a hard edge. */
 body[data-view]>.grit-bg:before{mask-image:linear-gradient(to bottom,#000 calc(100% - 140px),transparent calc(100% - 2px))}
 body[data-view]>.grit-bg:after{top:calc(100cqw * 9490 / 5810 - 140px);background-position:calc(var(--u) * 2200) calc(var(--u) * 1816 - 140px);mask-image:linear-gradient(to bottom,transparent,#000 140px)}
+
+/* Keep the clipping box fitted to the artwork so its scanned side rules are removed. */
+.welcome-heading{width:min(45vw,392px,43.97dvh);height:auto;max-height:none;clip-path:inset(0 4%)}
+@media(max-width:600px){.welcome-heading{width:min(92vw,43.97dvh)}}
