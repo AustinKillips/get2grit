@@ -650,3 +650,6 @@ body[data-view="raffle"] #page-content > .page-intro{background-color:#fafafa}
 body[data-view] #page-content > .page-intro{background-color:#fafafa}
 
 .schedule-meal{font-family:"Lucida Console",Monaco,monospace}
+
+/* Shared paragraph typography, including component-specific font shorthands. */
+body p{font-family:"Lucida Console",Monaco,monospace!important}
