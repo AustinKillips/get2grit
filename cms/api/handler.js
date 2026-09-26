@@ -1,4 +1,4 @@
-import {randomBytes} from 'node:crypto';
+import {randomBytes,createHash} from 'node:crypto';
 import {seal,unseal,cookies,cookie,validate} from '../lib/security.js';
 const repo='AustinKillips/get2grit',branch='main';
 const definitions=[['content-data.js','window.GRIT_CONTENT = ','schedule'],['raffle-data.js','window.GRIT_RAFFLE = ','raffle'],['rides-data.js','window.GRIT_RIDES = ','rides'],['site-copy-data.js','window.GRIT_COPY = ','copy']];
@@ -7,16 +7,18 @@ export default async function handler(req,res){
  res.setHeader('Cache-Control','no-store');res.setHeader('X-Content-Type-Options','nosniff');
  const send=(status,data)=>res.status(status).json(data),redirect=path=>{res.statusCode=302;res.setHeader('Location',path);res.end()};
  try{
- const {GITHUB_CLIENT_ID:client,GITHUB_CLIENT_SECRET:secret,SESSION_SECRET:key,CMS_ORIGIN:origin}=process.env;
+ const {GITHUB_CLIENT_ID:client,GITHUB_CLIENT_SECRET:secret,SESSION_SECRET:sessionKey,CMS_ORIGIN:configuredOrigin}=process.env;
+ const origin=configuredOrigin||'https://get2grit-admin.vercel.app';
+ const key=sessionKey||(secret?createHash('sha256').update('grit-session-v1:'+secret).digest('hex'):'');
  if(!client||!secret||!key||key.length!==64||!origin)return send(503,{error:'Editor sign-in is not configured yet.'});
  const url=new URL(req.url,origin),path=url.pathname,c=cookies(req),session=unseal(c.grit_session||'',key);
  if(path==='/api/login'&&req.method==='GET'){
-  const state=randomBytes(24).toString('hex');res.setHeader('Set-Cookie',cookie('grit_oauth',seal({state,exp:Date.now()+600000},key),600));
-  return redirect('https://github.com/login/oauth/authorize?'+new URLSearchParams({client_id:client,redirect_uri:origin+'/api/callback',state,scope:'public_repo'}));
+  const state=randomBytes(24).toString('hex'),verifier=randomBytes(32).toString('base64url');res.setHeader('Set-Cookie',cookie('grit_oauth',seal({state,verifier,exp:Date.now()+600000},key),600));
+  return redirect('https://github.com/login/oauth/authorize?'+new URLSearchParams({client_id:client,redirect_uri:origin+'/api/callback',state,scope:'public_repo',code_challenge:createHash('sha256').update(verifier).digest('base64url'),code_challenge_method:'S256'}));
  }
  if(path==='/api/callback'&&req.method==='GET'){
   const oauth=unseal(c.grit_oauth||'',key);if(!oauth||oauth.state!==url.searchParams.get('state')||!url.searchParams.get('code'))return send(403,{error:'Sign-in expired. Start again.'});
-  const r=await fetch('https://github.com/login/oauth/access_token',{method:'POST',headers:{Accept:'application/json','Content-Type':'application/json'},body:JSON.stringify({client_id:client,client_secret:secret,code:url.searchParams.get('code'),redirect_uri:origin+'/api/callback'})});
+  const r=await fetch('https://github.com/login/oauth/access_token',{method:'POST',headers:{Accept:'application/json','Content-Type':'application/json'},body:JSON.stringify({client_id:client,client_secret:secret,code:url.searchParams.get('code'),code_verifier:oauth.verifier,redirect_uri:origin+'/api/callback'})});
   const auth=await r.json();if(!auth.access_token)return send(403,{error:'GitHub sign-in failed.'});
   const permission=await gh(auth.access_token,'');if(!permission.permissions?.push)return send(403,{error:'You need write access to AustinKillips/get2grit.'});
   res.setHeader('Set-Cookie',[cookie('grit_oauth','',0),cookie('grit_session',seal({token:auth.access_token,exp:Date.now()+8*3600000},key))]);return redirect('/admin.html');
