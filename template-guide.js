@@ -103,6 +103,15 @@ function render(){
  });
  document.querySelector('#content').setAttribute('aria-labelledby','page-title');
  window.GritCopy?.apply();
+ const venueUrl='https://maps.app.goo.gl/uh6dYpVuiSq6JZds7';
+ const venue=document.querySelector('.footer-venue');
+ if(venue&&!venue.querySelector('a')&&!new URLSearchParams(location.search).has('cms')){
+  const link=document.createElement('a');link.href=venueUrl;link.target='_blank';link.rel='noopener';link.textContent=venue.textContent;venue.replaceChildren(link);
+ }
+ if(key==='schedule'){
+  document.querySelector('.page-intro').insertAdjacentHTML('afterend',`<p class="schedule-meeting"><strong>MEET HERE:</strong><br><a href="${venueUrl}" target="_blank" rel="noopener">Lake Leatherwood<br>1303 Co Rd 204, Eureka Springs, AR 72632</a></p>`);
+ }
+
  if(key==='group-rides'&&!new URLSearchParams(location.search).has('cms')){
   const video=document.querySelector('.bike-video em');
   if(video){const link=document.createElement('a');link.href='https://www.instagram.com/reel/DdVLap5TwqI/';link.target='_blank';link.rel='noopener';link.textContent=video.textContent;video.replaceChildren(link);}

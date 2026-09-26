@@ -693,3 +693,6 @@ body[data-view]>.grit-bg:after{top:calc(100cqw * 9490 / 5810 - 140px);background
 @media(max-width:600px){.welcome-heading{width:min(92vw,43.97dvh)}}
 
 .footer-blinkies{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:20px}.footer-blinkies img{display:block;width:88px;height:31px;image-rendering:pixelated}
+
+
+.schedule-meeting{background:#fafafa;border:1px solid #111;padding:12px;margin:0 0 28px;font-size:16px;line-height:1.5}
