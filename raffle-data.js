@@ -76,7 +76,7 @@ window.GRIT_RAFFLE = {
       ]
     },
     {
-      "name": "Wheelset!",
+      "name": "Wheelset of your choice! ",
       "donor": "Velocity",
       "logo": "assets/admin-uploads/5e58da3dd2034ebdb9ee9385edb2247f.png",
       "images": [
@@ -103,7 +103,7 @@ window.GRIT_RAFFLE = {
     {
       "name": "The Winner of Grit Fest",
       "donor": "Cheap Thrills",
-      "logo": "assets/admin-uploads/d9d01d42793a4d0891f4e55766ede537.png",
+      "logo": "",
       "images": []
     },
     {
@@ -158,7 +158,9 @@ window.GRIT_RAFFLE = {
       "name": "Hydration Flask!",
       "donor": "Type 2 Gear",
       "logo": "assets/admin-uploads/54e6bf60f7664a5b848d8be0d72df815.png",
-      "images": []
+      "images": [
+        "assets/admin-uploads/e4298afd9e07b70469e9b85a4bdf87a8.jpg"
+      ]
     },
     {
       "name": "Valve Core Remover!",
@@ -196,7 +198,9 @@ window.GRIT_RAFFLE = {
       "name": "Sturdy Used Gear Gift Card!",
       "donor": "Sturdy Used Gear",
       "logo": "assets/admin-uploads/d51e2118c0584e3eb98b394e52a24c73.png",
-      "images": []
+      "images": [
+        "assets/admin-uploads/709549b7ac6195ac7d11e7ff708d4b1e.png"
+      ]
     },
     {
       "name": "MTB helmets!",
@@ -205,10 +209,12 @@ window.GRIT_RAFFLE = {
       "images": []
     },
     {
-      "name": "Apparel",
+      "name": "Rare NOS Waterbottle! ",
       "donor": "Moondust Apparel",
       "logo": "assets/admin-uploads/c45f1dfd2ba04cb7966a213981ce6258.png",
-      "images": []
+      "images": [
+        "assets/admin-uploads/6eed88550f2c367bf1f81d6ea2e75a21.jpg"
+      ]
     },
     {
       "name": "Mousetrap Pedal Adapters!",
@@ -249,7 +255,7 @@ window.GRIT_RAFFLE = {
       ]
     },
     {
-      "name": "Comic Book!",
+      "name": "JF's Comic Book!",
       "donor": "JF Frankel",
       "logo": "assets/admin-uploads/5d559a3ca89b4d16b1983910a983f22f-fast.webp",
       "images": [
@@ -271,7 +277,7 @@ window.GRIT_RAFFLE = {
     {
       "name": "Sunnies",
       "donor": "Smith Optics",
-      "logo": "",
+      "logo": "assets/admin-uploads/b816b3386f1b8c7a8dc4028ab29e821e.jpg",
       "images": [
         "assets/admin-uploads/58bf73509b9fc8ca1cb9231ec3f2674b.webp"
       ]
