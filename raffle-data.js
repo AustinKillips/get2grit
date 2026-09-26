@@ -269,6 +269,14 @@ window.GRIT_RAFFLE = {
       "images": []
     },
     {
+      "name": "Sunnies",
+      "donor": "Smith Optics",
+      "logo": "",
+      "images": [
+        "assets/admin-uploads/58bf73509b9fc8ca1cb9231ec3f2674b.webp"
+      ]
+    },
+    {
       "name": "Cyclo Socks!",
       "donor": "The Athletic Company",
       "logo": "assets/admin-uploads/d45460541b064ef4abaa5b15c6ac2e9d.png",
@@ -283,14 +291,6 @@ window.GRIT_RAFFLE = {
       "images": [
         "assets/admin-uploads/6815276bd699473abf793b80e4a65f5f.jpg",
         "assets/admin-uploads/041d9308f84041fcafa4c9ff10906c05-fast.webp"
-      ]
-    },
-    {
-      "name": "Sunnies",
-      "donor": "",
-      "logo": "",
-      "images": [
-        "assets/admin-uploads/58bf73509b9fc8ca1cb9231ec3f2674b.webp"
       ]
     }
   ]
