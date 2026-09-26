@@ -653,3 +653,5 @@ body[data-view] #page-content > .page-intro{background-color:#fafafa}
 
 /* Shared paragraph typography, including component-specific font shorthands. */
 body p{font-family:"Lucida Console",Monaco,monospace!important}
+
+body[data-view="raffle"] .section-head{margin-top:-21px}
