@@ -2072,7 +2072,7 @@ window.GRIT_COPY = {
         "root": 0,
         "path": "div:nth-of-type(2) > section:nth-of-type(1) > p:nth-of-type(2)",
         "index": 0,
-        "value": "If you would like to camp in a large field that is an option! If you would like to camp in a more secluded spot...that is also an option! There is plenty of camping and it’s all included in your ticket!",
+        "value": "If you would like to camp in a large field that is an option! \n\nIf you would like to camp in a more secluded spot...that is also an option! \n\nThere is plenty of camping and it’s all included in your ticket!",
         "label": "If you would like to camp in a large field that is an option! If you would like to camp in a more se"
       }
     ]
