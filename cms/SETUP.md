@@ -15,3 +15,32 @@ The browser receives an encrypted, HttpOnly, Secure, SameSite cookie that expire
 After environment setup, redeploy, sign in, and verify loading and a small reversible content change before using this editor for production content. GitHub Pages and Vercel both redeploy after commits. Public assets can take a little time to appear after uploads.
 
 Do not blindly republish old local content-data.js, raffle-data.js, rides-data.js or site-copy-data.js after online editing. Pull the GitHub changes into the local authoring copy first.
+
+## Private photo/video submissions
+
+Create a **private** Vercel Blob store connected to this project. Enable its
+read/write token environment variable (`BLOB_READ_WRITE_TOKEN`). Keep that token
+server-side. Set `UPLOADS_ENABLED=true` when ready to accept submissions and
+redeploy. The existing GitHub editor session and repository write permission
+protect `/review.html` API access.
+
+- Submission form: `/submit.html`
+- Moderation: `/review.html` (also linked from the editor)
+- Readiness: `/api/gallery/status`
+- Public gallery feed: `/api/gallery/public`
+
+Files upload directly to private Blob storage. The signed completion callback
+creates a pending record. The browser confirms receipt before reporting success.
+Approval creates a public metadata record; public media requests still verify the
+approved status. Rejection leaves the file private. No pending files go into Git.
+
+Limits: 25 upload-token requests per IP per UTC day; resized photos up to 8 MB;
+videos up to 50 MB. Client photos are resized to 1800px and stripped of metadata.
+Rejected files, orphan uploads, and daily quota records are retained in private
+storage; review storage usage periodically. Disable new uploads by setting
+`UPLOADS_ENABLED=false` and redeploying. Existing approved media stays available.
+
+Before launch, test a small photo and video: confirm private receipt, verify they
+are absent from the public feed, sign in to review, approve one and reject one,
+and verify public visibility matches those decisions. Local tests use an
+in-memory storage adapter and do not replace this live integration check.

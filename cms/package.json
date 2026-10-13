@@ -1,1 +1,1 @@
-{"private":true,"type":"module","scripts":{"build":"node build.mjs","test":"node --test"},"engines":{"node":"22.x"}}
+{"private":true,"type":"module","scripts":{"build":"node build.mjs","test":"node --test"},"engines":{"node":"22.x"},"dependencies":{"@vercel/blob":"^2.8.1","esbuild":"^0.28.2"}}

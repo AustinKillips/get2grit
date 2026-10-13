@@ -1,3 +1,4 @@
+import {publicGallery,reviewGallery} from '../lib/gallery.js';
 import {randomBytes,createHash} from 'node:crypto';
 import {seal,unseal,cookies,cookie,validate} from '../lib/security.js';
 const repo='AustinKillips/get2grit',branch='main';
@@ -7,6 +8,8 @@ export default async function handler(req,res){
  res.setHeader('Cache-Control','no-store');res.setHeader('X-Content-Type-Options','nosniff');
  const send=(status,data)=>res.status(status).json(data),redirect=path=>{res.statusCode=302;res.setHeader('Location',path);res.end()};
  try{
+ const galleryPath=new URL(req.url,'https://local').pathname;
+ if(galleryPath.startsWith('/api/gallery/')&&!galleryPath.startsWith('/api/gallery/review'))return await publicGallery(req,res,galleryPath);
  const {GITHUB_CLIENT_ID:client,GITHUB_CLIENT_SECRET:secret,SESSION_SECRET:sessionKey,CMS_ORIGIN:configuredOrigin}=process.env;
  const origin=configuredOrigin||'https://get2grit-admin.vercel.app';
  const key=sessionKey||(secret?createHash('sha256').update('grit-session-v1:'+secret).digest('hex'):'');
@@ -27,6 +30,7 @@ export default async function handler(req,res){
  if(req.method==='POST'&&(req.headers.origin!==origin||req.headers['x-grit-editor']!=='1'))return send(403,{error:'Invalid request origin.'});
  if(path==='/api/logout'&&req.method==='POST'){res.setHeader('Set-Cookie',cookie('grit_session','',0));return send(200,{saved:true})}
  const permission=await gh(session.token,'');if(!permission.permissions?.push)return send(403,{error:'Repository write access required.'});
+ if(path.startsWith('/api/gallery/review'))return await reviewGallery(req,res,path);
  const head=await gh(session.token,`git/ref/heads/${branch}`),revision=head.object.sha;
  if(path==='/api/content'&&req.method==='GET'){
   const result={revision};await Promise.all(definitions.map(async([file,prefix,key])=>{const f=await gh(session.token,`contents/${file}?ref=${revision}`),text=Buffer.from(f.content,'base64').toString();if(!text.startsWith(prefix))throw Error('Unexpected data format');const value=JSON.parse(text.slice(prefix.length).trim().replace(/;$/,''));result[key]=key==='schedule'?value.schedule:value}));return send(200,result)
@@ -46,5 +50,5 @@ export default async function handler(req,res){
   const created=await gh(session.token,`contents/${path}`,'PUT',{message:'Upload festival editor image',content:raw.toString('base64'),branch});return send(200,{path,revision:created.commit.parents?.[0]?.sha===revision?created.commit.sha:revision})
  }
  return send(404,{error:'Not found'});
- }catch(e){return send(e.status||400,{error:e.message||'Request failed'})}
+ }catch(e){if(res.headersSent){res.end();return}return send(e.status||400,{error:e.message||'Request failed'})}
 }
