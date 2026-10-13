@@ -41,7 +41,7 @@ async function publicGallery(req,res,path){
   res.setHeader('Access-Control-Allow-Origin','*');res.setHeader('Cache-Control','public,max-age=30');
   // Only separately indexed approved records are enumerated publicly.
   const result=[];let cursor;
-  do{const page=await list({token:options().token,prefix:'published/',limit:100,cursor});for(const b of page.blobs){const r=await read(b.pathname);if(r)result.push(r.value)}cursor=page.hasMore?page.cursor:null}while(cursor&&result.length<1000);
+  do{const page=await list({token:options().token,prefix:'published/',limit:100,cursor});for(const b of page.blobs){const r=await read(b.pathname);if(r){const source=await read(`submissions/${r.value.id}.json`);if(source?.value.status==='approved')result.push(r.value)}}cursor=page.hasMore?page.cursor:null}while(cursor&&result.length<1000);
   return send(200,{items:result});
  }
  if(path==='/api/gallery/receipt'&&req.method==='GET'){
@@ -95,7 +95,7 @@ async function reviewGallery(req,res,path){
  }
  if(path==='/api/gallery/review'&&req.method==='POST'){
   const data=typeof req.body==='string'?JSON.parse(req.body):req.body;if(!idOK(data.id)||!['approved','rejected'].includes(data.status))throw fail('Invalid review.');
-  const path=`submissions/${data.id}.json`,old=await read(path);if(!old)throw fail('Not found.',404);if(old.etag!==data.revision||old.value.status!=='pending')throw fail('This submission was already reviewed. Reload the queue.',409);
+  const path=`submissions/${data.id}.json`,old=await read(path);if(!old)throw fail('Not found.',404);if(old.etag!==data.revision||!(old.value.status==='pending'||(old.value.status==='approved'&&data.status==='rejected')))throw fail('This submission was already reviewed. Reload the queue.',409);
   const edited=data.status==='approved'?metadata({...data,consent:old.value.consent}):{};if(data.status==='approved'&&old.value.mime.startsWith('video/')&&!edited.transcript)throw fail('Add a video description or transcript before publishing.');
   const record={...old.value,...edited,status:data.status,reviewedAt:new Date().toISOString()};await write(path,record,old.etag);
   if(data.status==='approved'){
