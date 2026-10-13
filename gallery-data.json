@@ -1149,11 +1149,11 @@
       "creditConfirmed": true,
       "selects": [
         "spencer-harding-013",
-        "spencer-harding-015",
-        "spencer-harding-018",
-        "spencer-harding-021",
-        "spencer-harding-025",
+        "spencer-harding-089",
+        "spencer-harding-091",
         "spencer-harding-037",
+        "spencer-harding-084",
+        "spencer-harding-021",
         "spencer-harding-054",
         "spencer-harding-062"
       ]
@@ -5511,9 +5511,9 @@
       ],
       "selects": [
         "anna-guyton-097",
-        "anna-guyton-119",
+        "anna-guyton-025",
         "anna-guyton-123",
-        "anna-guyton-137",
+        "anna-guyton-118",
         "anna-guyton-145",
         "anna-guyton-181",
         "anna-guyton-284",
@@ -6672,8 +6672,8 @@
         "collection-two-028",
         "collection-two-029",
         "collection-two-038",
-        "collection-two-052",
-        "collection-two-083"
+        "collection-two-083",
+        "collection-two-052"
       ]
     }
   ]

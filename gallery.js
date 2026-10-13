@@ -119,7 +119,7 @@ window.mountGallery=function(root){
   if(!items.length)section.append(make('p','page-intro',g.community?'Your approved photos and videos will appear here.':'Photos coming soon.'));
  };
  (async()=>{try{
-  const res=await fetch('gallery-data.json',{signal:controller.signal});if(!res.ok)throw Error('Gallery unavailable');const data=await res.json();if(disposed)return;
+  const res=await fetch('gallery-data.json?v=release-20261012',{signal:controller.signal});if(!res.ok)throw Error('Gallery unavailable');const data=await res.json();if(disposed)return;
   data.groups.filter(g=>g.creditConfirmed).forEach(drawGroup);status.textContent='';
  }catch(e){if(!disposed)status.textContent='The galleries couldn’t load. Please refresh to try again.'}
  const community={id:'your-photos',name:'Your Photos!',community:true,items:[]};
