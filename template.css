@@ -781,3 +781,19 @@ body[data-view]>.grit-bg:after{top:calc(100cqw * 9490 / 5810 - 140px);background
 .gallery-videos h2,.gallery-photos-title{color:#000;background:#fff000;font-size:2.225rem;border:1px solid #111}
 .gallery-photos-title{background:#fff019}
 .gallery-intro.ride-intro{border-width:4px;margin-top:0}
+
+/* A single switchable video inside a small GRIT TV cabinet. */
+.video-authors{margin:16px 0 20px;gap:8px}
+.video-authors button{font:1.1rem/1.2 var(--pixel);padding:3px 7px;background:#fff000;color:#111;border:1px solid #111;cursor:pointer}
+.video-authors button[aria-pressed=true]{background:#f288bd;box-shadow:inset 0 -3px #111}
+.video-authors button:hover{background:#f288bd}
+.video-authors button:focus-visible{outline:3px solid #0000ff;outline-offset:3px}
+.grit-video-player{border:2px solid #111;background:#f288bd;padding:10px;box-shadow:5px 5px 0 #111}
+.video-player-bar{display:flex;align-items:center;justify-content:space-between;padding:0 4px 8px;color:#111;font:1.5rem/1.2 var(--pixel);letter-spacing:2px}
+.video-player-star{color:#0000ff;font-size:1.7rem}
+.grit-video-player .gallery-video-frame{border:10px solid transparent}
+.video-player-screen{border:1px solid #111;background:#111}
+.video-player-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:12px 4px 2px}
+.video-now-playing{font:12px/1.5 'Lucida Console',monospace;background:#fff000;padding:4px 6px;overflow-wrap:anywhere}
+.video-player-footer .gallery-video-link{margin:0;font-size:12px;color:#111}
+@media(max-width:600px){.grit-video-player{padding:7px;box-shadow:3px 3px 0 #111}.grit-video-player .gallery-video-frame{border-width:6px}.video-player-footer{gap:8px}}

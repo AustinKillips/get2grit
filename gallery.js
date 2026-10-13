@@ -11,13 +11,27 @@ window.mountGallery=function(root){
  const body=make('div','gallery-collections');root.append(body);
  const videos=make('section','gallery-videos');videos.setAttribute('aria-labelledby','gallery-videos-title');
  const videosTitle=make('h2','','Videos');videosTitle.id='gallery-videos-title';videos.append(videosTitle);
- for(const [name,id] of [['Wheelmouse','CFrjEBYh9-Y'],['Taylor Martin','N04tEHPoEwA']]){
-  const card=make('section','gallery-video-card');card.append(make('h3','',name));
-  const frame=make('div','gallery-video-frame'),embed=make('iframe');
-  embed.src='https://www.youtube-nocookie.com/embed/'+id;embed.title='GRIT FEST video by '+name;embed.loading='lazy';embed.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';embed.allowFullscreen=true;embed.referrerPolicy='strict-origin-when-cross-origin';
-  frame.append(embed);card.append(frame);
-  const link=make('a','gallery-video-link','Watch '+name+' on YouTube');link.href='https://www.youtube.com/watch?v='+id;link.target='_blank';link.rel='noopener';card.append(link);videos.append(card);
+ const videoChoices=[['Wheelmouse','CFrjEBYh9-Y'],['Taylor Martin','N04tEHPoEwA']];
+ const videoNav=make('nav','gallery-jumps video-authors');videoNav.setAttribute('aria-label','Video authors');videos.append(videoNav);
+ const player=make('div','grit-video-player'),playerBar=make('div','video-player-bar');
+ playerBar.append(make('span','','GRIT TV'),make('span','video-player-star','✦'));playerBar.lastChild.setAttribute('aria-hidden','true');
+ const frame=make('div','gallery-video-frame'),screen=make('div','video-player-screen');frame.append(screen);
+ const playerFoot=make('div','video-player-footer'),nowPlaying=make('span','video-now-playing'),link=make('a','gallery-video-link');
+ nowPlaying.setAttribute('aria-live','polite');link.target='_blank';link.rel='noopener';playerFoot.append(nowPlaying,link);player.append(playerBar,frame,playerFoot);videos.append(player);
+ let selectedVideo=-1;
+ const videoButtons=videoChoices.map(([name],index)=>{
+  const button=make('button','',name);button.type='button';button.setAttribute('aria-controls','grit-video-screen');button.onclick=()=>selectVideo(index);videoNav.append(button);return button;
+ });
+ screen.id='grit-video-screen';
+ function selectVideo(index){
+  if(index===selectedVideo)return;selectedVideo=index;
+  const [name,id]=videoChoices[index],embed=make('iframe');
+  embed.src='https://www.youtube-nocookie.com/embed/'+id+'?playsinline=1';embed.title='GRIT FEST video by '+name;embed.loading='lazy';embed.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';embed.allowFullscreen=true;embed.referrerPolicy='strict-origin-when-cross-origin';
+  // Replacing the frame stops the previous video, including its audio.
+  screen.replaceChildren(embed);videoButtons.forEach((button,i)=>button.setAttribute('aria-pressed',String(i===index)));
+  nowPlaying.textContent='ON SCREEN: '+name;link.textContent='Watch on YouTube ↗';link.href='https://www.youtube.com/watch?v='+id;
  }
+ selectVideo(0);
  body.append(videos);
  const photosTitle=make('h2','gallery-photos-title','Photos');body.append(photosTitle,jumps);
 
