@@ -697,7 +697,7 @@ body[data-view]>.grit-bg:after{top:calc(100cqw * 9490 / 5810 - 140px);background
 
 .schedule-meeting{margin:38px 0 28px;font-size:16px;line-height:1.5}
 /* Galleries keep the page's normal vertical scroll, with bounded batches of media. */
-.gallery-share{display:block;background:var(--yellow);border:2px solid #111;padding:14px;font:1.5rem/1.2 var(--pixel);margin:0 0 16px;text-align:center}
+.gallery-share{display:block;background:#f288bd;border:2px solid #111;padding:14px;font:1.5rem/1.2 var(--pixel);margin:0;text-align:center}
 .gallery-jumps{display:flex;gap:8px;flex-wrap:wrap;max-width:none;margin:20px 0 30px}.gallery-jumps a{font-size:1.1rem;overflow-wrap:anywhere}
 .photo-collection{margin:32px 0 44px;scroll-margin-top:20px}.photo-collection h2{background:#111;color:white;width:fit-content;padding:3px 6px;font:1.6rem var(--pixel)}
 .photographer-link{display:inline-block;margin-bottom:16px}.photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
@@ -776,3 +776,8 @@ body[data-view]>.grit-bg:after{top:calc(100cqw * 9490 / 5810 - 140px);background
  .photo-card img.photo-mobile{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain;background:transparent}
  .gallery-video-frame{border-width:8px}
 }
+
+/* Gallery section labels and connected submission invitation, at every viewport. */
+.gallery-videos h2,.gallery-photos-title{color:#000;background:#fff000;font-size:2.225rem;border:1px solid #111}
+.gallery-photos-title{background:#fff019}
+.gallery-intro.ride-intro{border-width:4px;margin-top:0}
