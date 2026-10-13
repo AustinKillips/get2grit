@@ -1,5 +1,7 @@
+import {populateChallenges} from './challenge-select.js';
 import {upload} from '@vercel/blob/client';
 const form=document.querySelector('form'),status=document.querySelector('#status'),progress=document.querySelector('progress');
+populateChallenges(form.elements.challenge,document.querySelector('#challenge-task'));
 fetch('/api/gallery/status').then(r=>r.json()).then(data=>{form.hidden=!data.enabled;status.textContent=data.enabled?'Ready when you are. Nothing is published automatically.':'Submissions aren’t open yet. Please check back soon.'}).catch(()=>status.textContent='Couldn’t connect. Please refresh to try again.');
 async function photo(file){
  const bitmap=await createImageBitmap(file,{imageOrientation:'from-image'});const ratio=Math.min(1,1800/Math.max(bitmap.width,bitmap.height));const canvas=document.createElement('canvas');canvas.width=Math.round(bitmap.width*ratio);canvas.height=Math.round(bitmap.height*ratio);canvas.getContext('2d').drawImage(bitmap,0,0,canvas.width,canvas.height);bitmap.close();
