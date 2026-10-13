@@ -4,7 +4,7 @@ window.mountGallery=function(root){
  const make=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text)e.textContent=text;return e};
  const safeUrl=u=>typeof u==='string'&&(/^assets\/photos\/[\w/.-]+$/.test(u)||/^https:\/\//.test(u))?u:'';
  root.replaceChildren();
- const upload=make('a','gallery-share','share your scavenger hunt photos and videos');upload.href='https://get2grit-admin.vercel.app/submit.html';root.append(upload);
+ const upload=make('a','gallery-share','UPLOAD YOUR PHOTOS/VIDEOS HERE');upload.href='https://get2grit-admin.vercel.app/submit.html';root.append(upload);
  const intro=make('section','intro ride-intro gallery-intro');intro.append(make('p','','Did you ferry your bike across the lake? Prove it...'));root.append(intro);
  const jumps=make('nav','gallery-jumps');jumps.setAttribute('aria-label','Photographer galleries');
  const status=make('p','gallery-status','Loading the photo galleries…');status.setAttribute('role','status');root.append(status);

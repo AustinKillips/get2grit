@@ -697,7 +697,7 @@ body[data-view]>.grit-bg:after{top:calc(100cqw * 9490 / 5810 - 140px);background
 
 .schedule-meeting{margin:38px 0 28px;font-size:16px;line-height:1.5}
 /* Galleries keep the page's normal vertical scroll, with bounded batches of media. */
-.gallery-share{display:block;background:#f288bd;border:2px solid #111;padding:14px;font:1.5rem/1.2 var(--pixel);margin:0;text-align:center}
+.gallery-share{display:block;background:#feed16;border:2px solid #111;padding:14px;font:1.5rem/1.2 var(--pixel);margin:0;text-align:center}
 .gallery-jumps{display:flex;gap:8px;flex-wrap:wrap;max-width:none;margin:20px 0 30px}.gallery-jumps a{font-size:1.1rem;overflow-wrap:anywhere}
 .photo-collection{margin:32px 0 44px;scroll-margin-top:20px}.photo-collection h2{background:#111;color:white;width:fit-content;padding:3px 6px;font:1.6rem var(--pixel)}
 .photographer-link{display:inline-block;margin-bottom:16px}.photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
@@ -797,3 +797,12 @@ body[data-view]>.grit-bg:after{top:calc(100cqw * 9490 / 5810 - 140px);background
 .video-now-playing{font:12px/1.5 'Lucida Console',monospace;background:#fff000;padding:4px 6px;overflow-wrap:anywhere}
 .video-player-footer .gallery-video-link{margin:0;font-size:12px;color:#111}
 @media(max-width:600px){.grit-video-player{padding:7px}.grit-video-player .gallery-video-frame{border-width:6px}.video-player-footer{gap:8px}}
+
+/* Supporter logos keep their proportions, with contrasting panels for white artwork. */
+.supporters-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.supporter-card{margin:0;min-width:0;border:4px solid transparent;background:repeating-conic-gradient(#0000ff 0% 25%,#f17fba 0% 50%) 0 0 / 4px 4px border-box}
+.supporter-logo{height:160px;padding:16px;display:flex;align-items:center;justify-content:center;background:#fafafa}
+.supporter-logo-dark{background:#222}
+.supporter-logo img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+.supporter-card figcaption{padding:8px;text-align:center;font:14px/1.4 monospace;background:#feed16;color:#111;border-top:1px solid #111}
+@media(max-width:480px){.supporters-grid{gap:12px}.supporter-logo{height:125px;padding:10px}}
