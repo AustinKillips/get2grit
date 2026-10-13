@@ -701,7 +701,7 @@ body[data-view]>.grit-bg:after{top:calc(100cqw * 9490 / 5810 - 140px);background
 .gallery-jumps{display:flex;gap:8px;flex-wrap:wrap;max-width:none;margin:20px 0 30px}.gallery-jumps a{font-size:1.1rem;overflow-wrap:anywhere}
 .photo-collection{margin:32px 0 44px;scroll-margin-top:20px}.photo-collection h2{background:#111;color:white;width:fit-content;padding:3px 6px;font:1.6rem var(--pixel)}
 .photographer-link{display:inline-block;margin-bottom:16px}.photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.photo-card{margin:0;background:#fafafa;border:1px solid #111;min-width:0}.photo-open{display:block;border:0;padding:0;width:100%;background:#111;cursor:zoom-in}.photo-card img,.photo-card video{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;background:#111}.photo-card .photo-open img{object-fit:cover}.photo-card figcaption{padding:10px}.photo-card p{font-size:13px;line-height:1.45;margin:0 0 8px;overflow-wrap:anywhere}.photo-credit{font-weight:bold}.manifest-label{background:#fff000;border:1px dashed #111;padding:8px;transform:rotate(-1deg)}.manifest-label span{display:block;font-weight:bold;margin-bottom:4px}.gallery-more{display:block;margin:18px auto;padding:12px;border:2px solid #111;background:#fff000;font:1rem 'Lucida Console',monospace;cursor:pointer}.gallery-more[hidden]{display:none}.gallery-dialog{width:min(95vw,1200px);max-height:94dvh;padding:14px;background:#fafafa;border:2px solid #111}.gallery-dialog::backdrop{background:#000c}.gallery-dialog img{display:block;max-width:100%;max-height:74dvh;margin:12px auto;object-fit:contain}.gallery-close{padding:12px;cursor:pointer}.gallery-dialog p{margin:12px 0}.gallery-status:empty{display:none}
+.photo-card{margin:0;background:#fafafa;border:1px solid #111;min-width:0}.photo-open{display:block;border:0;padding:0;width:100%;background:#111;cursor:zoom-in}.photo-card img,.photo-card video{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;background:#111}.photo-card .photo-open img{object-fit:cover}.photo-card figcaption{padding:10px}.photo-card p{font-size:13px;line-height:1.45;margin:0 0 8px;overflow-wrap:anywhere}.photo-credit{font-weight:bold}.manifest-label{background:#fff000;border:1px dashed #111;padding:8px}.manifest-label span{display:block;font-weight:bold;margin-bottom:4px}.gallery-more{display:block;margin:18px auto;padding:12px;border:2px solid #111;background:#fff000;font:1rem 'Lucida Console',monospace;cursor:pointer}.gallery-more[hidden]{display:none}.gallery-dialog{width:min(95vw,1200px);max-height:94dvh;padding:14px;background:#fafafa;border:2px solid #111}.gallery-dialog::backdrop{background:#000c}.gallery-dialog img{display:block;max-width:100%;max-height:74dvh;margin:12px auto;object-fit:contain}.gallery-close{padding:12px;cursor:pointer}.gallery-dialog p{margin:12px 0}.gallery-status:empty{display:none}
 @media(max-width:480px){.photo-grid{grid-template-columns:1fr}.gallery-share{font-size:1.3rem}}
 
 /* Expanded gallery: full photographs with keyboard controls and a compact preview strip. */
@@ -782,13 +782,13 @@ body[data-view]>.grit-bg:after{top:calc(100cqw * 9490 / 5810 - 140px);background
 .gallery-photos-title{background:#fff019}
 .gallery-intro.ride-intro{border-width:4px;margin-top:0}
 
-/* A single switchable video inside a small GRIT TV cabinet. */
+/* A single switchable video inside a small GRITAMP cabinet. */
 .video-authors{margin:16px 0 20px;gap:8px}
 .video-authors button{font:1.1rem/1.2 var(--pixel);padding:3px 7px;background:#fff000;color:#111;border:1px solid #111;cursor:pointer}
 .video-authors button[aria-pressed=true]{background:#f288bd;box-shadow:inset 0 -3px #111}
 .video-authors button:hover{background:#f288bd}
 .video-authors button:focus-visible{outline:3px solid #0000ff;outline-offset:3px}
-.grit-video-player{border:2px solid #111;background:#f288bd;padding:10px;box-shadow:5px 5px 0 #111}
+.grit-video-player{border:2px solid #111;background:#f288bd;padding:10px}
 .video-player-bar{display:flex;align-items:center;justify-content:space-between;padding:0 4px 8px;color:#111;font:1.5rem/1.2 var(--pixel);letter-spacing:2px}
 .video-player-star{color:#0000ff;font-size:1.7rem}
 .grit-video-player .gallery-video-frame{border:10px solid transparent}
@@ -796,4 +796,4 @@ body[data-view]>.grit-bg:after{top:calc(100cqw * 9490 / 5810 - 140px);background
 .video-player-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:12px 4px 2px}
 .video-now-playing{font:12px/1.5 'Lucida Console',monospace;background:#fff000;padding:4px 6px;overflow-wrap:anywhere}
 .video-player-footer .gallery-video-link{margin:0;font-size:12px;color:#111}
-@media(max-width:600px){.grit-video-player{padding:7px;box-shadow:3px 3px 0 #111}.grit-video-player .gallery-video-frame{border-width:6px}.video-player-footer{gap:8px}}
+@media(max-width:600px){.grit-video-player{padding:7px}.grit-video-player .gallery-video-frame{border-width:6px}.video-player-footer{gap:8px}}

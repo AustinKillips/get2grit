@@ -14,7 +14,7 @@ window.mountGallery=function(root){
  const videoChoices=[['Wheelmouse','CFrjEBYh9-Y'],['Taylor Martin','N04tEHPoEwA']];
  const videoNav=make('nav','gallery-jumps video-authors');videoNav.setAttribute('aria-label','Video authors');videos.append(videoNav);
  const player=make('div','grit-video-player'),playerBar=make('div','video-player-bar');
- playerBar.append(make('span','','GRIT TV'),make('span','video-player-star','✦'));playerBar.lastChild.setAttribute('aria-hidden','true');
+ playerBar.append(make('span','','GRITAMP'),make('span','video-player-star','✦'));playerBar.lastChild.setAttribute('aria-hidden','true');
  const frame=make('div','gallery-video-frame'),screen=make('div','video-player-screen');frame.append(screen);
  const playerFoot=make('div','video-player-footer'),nowPlaying=make('span','video-now-playing'),link=make('a','gallery-video-link');
  nowPlaying.setAttribute('aria-live','polite');link.target='_blank';link.rel='noopener';playerFoot.append(nowPlaying,link);player.append(playerBar,frame,playerFoot);videos.append(player);
