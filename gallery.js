@@ -95,8 +95,10 @@ window.mountGallery=function(root){
   const jump=make('a','',g.name);jump.href='#'+section.id;jump.onclick=e=>{e.preventDefault();section.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'start'});heading.tabIndex=-1;heading.focus({preventScroll:true})};jumps.append(jump);
   const grid=make('div','photo-grid');grid.setAttribute('role','region');grid.setAttribute('aria-label',g.name+' photos');grid.tabIndex=0;section.append(grid);body.append(section);
   let count=0;const more=make('button','gallery-more','Show more photos');more.type='button';
-  function next(){
-   const batch=items.slice(count,count+(count===0&&selected.length?selected.length:12));
+  const mobile=matchMedia('(max-width:600px)');
+  const swipe=make('p','gallery-swipe-hint','Swipe for more from '+g.name+'!');swipe.hidden=items.length<=4;
+  function next(all=false){
+   const batch=items.slice(count,all?items.length:count+(count===0&&selected.length?selected.length:12));
    for(const item of batch){
     if(!safeUrl(item.src))continue;
     const figure=make('figure','photo-card'),cap=make('figcaption');
@@ -115,7 +117,8 @@ window.mountGallery=function(root){
    }
    count+=batch.length;more.hidden=count>=items.length;more.textContent='Show more from '+g.name;
   }
-  more.onclick=next;section.append(more);next();
+  more.onclick=()=>next();section.append(more,swipe);next(mobile.matches);
+  mobile.addEventListener('change',e=>{if(e.matches)next(true)},{signal:controller.signal});
   if(!items.length)section.append(make('p','page-intro',g.community?'Your approved photos and videos will appear here.':'Photos coming soon.'));
  };
  (async()=>{try{

@@ -834,7 +834,8 @@ header nav{max-width:100%}
 @media(max-width:600px){.nav-second-row{gap:7px 8px}}
 
 /* Size the guide border to its link rows instead of the page column. */
-header nav{display:grid;grid-template-columns:repeat(3,max-content);width:max-content;max-width:100%;align-items:start;gap:8px;margin-inline:auto}
+header nav{--nav-font-size:2.05rem;display:grid;grid-template-columns:repeat(3,max-content);width:max-content;max-width:100%;align-items:start;gap:8px;margin-inline:auto}
+header nav a,header nav .event-nav summary{font-size:var(--nav-font-size)}
 header nav .nav-first-row{display:contents}
 header nav .nav-first-row > a{grid-column:3;grid-row:1}
 header nav > a{grid-column:2;grid-row:1}
@@ -849,8 +850,7 @@ header nav .nav-second-row{grid-column:1/-1;min-width:0;justify-content:center;g
 
 /* On phones, keep the five main links in three deliberate, compact rows. */
 @media(max-width:600px){
- header nav{grid-template-columns:repeat(2,max-content);gap:8px}
- header nav .event-nav summary,header nav .nav-first-row > a,header nav > a,header nav .nav-second-row a{font-size:clamp(1.05rem,5.53vw,1.425rem)}
+ header nav{--nav-font-size:clamp(1.05rem,5.53vw,1.425rem);grid-template-columns:repeat(2,max-content);gap:8px}
  header nav .nav-first-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:start;gap:8px;grid-column:1/-1;grid-row:1;min-width:0}
  header nav .nav-first-row > a{flex:none}
  header nav .nav-second-row{display:contents}
@@ -864,4 +864,23 @@ header nav .nav-second-row{grid-column:1/-1;min-width:0;justify-content:center;g
  .photo-card .photo-open{display:block}
  .photo-card .photo-open > img:not(.photo-mobile){display:none}
  .photo-card .photo-open img.photo-mobile{width:100%;aspect-ratio:3/2;object-fit:cover}
+}
+
+/* Expanded navigation fills the content column, with every row centered. */
+header nav:has(.event-nav[open]){display:flex;flex-wrap:wrap;justify-content:center;width:100%;gap:8px}
+header nav:has(.event-nav[open]) .nav-first-row,
+header nav:has(.event-nav[open]) .nav-second-row{display:contents}
+header nav .event-nav[open]{flex:0 0 100%;width:100%;min-width:0}
+header nav .event-nav[open] summary{margin-inline:auto}
+header nav .event-nav[open] .event-nav-links{width:100%;max-width:100%;justify-content:center;gap:8px;margin-top:8px}
+header nav .event-nav-links a{flex:1 1 auto;text-align:center}
+header nav:has(.event-nav[open]) > a,
+header nav:has(.event-nav[open]) .nav-first-row > a,
+header nav:has(.event-nav[open]) .nav-second-row > a{flex:1 1 auto;text-align:center}
+
+/* Horizontal phone galleries expose every photo through swiping. */
+.gallery-swipe-hint{display:none}
+@media(max-width:600px){
+ .photo-collection > .gallery-more{display:none}
+ .gallery-swipe-hint:not([hidden]){display:block;margin:18px auto;text-align:center;width:fit-content;max-width:100%;padding:8px 10px;background:var(--yellow);font:1rem/1.4 'Lucida Console',monospace}
 }
