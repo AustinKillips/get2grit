@@ -93,7 +93,7 @@ window.mountGallery=function(root){
   const heading=make('h2','',g.name);heading.id=section.id+'-title';section.setAttribute('aria-labelledby',heading.id);section.append(heading);
   if(safeUrl(g.creditUrl)){const credit=make('a','photographer-link','More from '+g.name);credit.href=g.creditUrl;credit.target='_blank';credit.rel='noopener';section.append(credit)}
   const jump=make('a','',g.name);jump.href='#'+section.id;jump.onclick=e=>{e.preventDefault();section.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'start'});heading.tabIndex=-1;heading.focus({preventScroll:true})};jumps.append(jump);
-  const grid=make('div','photo-grid');section.append(grid);body.append(section);
+  const grid=make('div','photo-grid');grid.setAttribute('role','region');grid.setAttribute('aria-label',g.name+' photos');grid.tabIndex=0;section.append(grid);body.append(section);
   let count=0;const more=make('button','gallery-more','Show more photos');more.type='button';
   function next(){
    const batch=items.slice(count,count+(count===0&&selected.length?selected.length:12));
@@ -107,7 +107,7 @@ window.mountGallery=function(root){
      const button=make('button','photo-open');button.type='button';button.setAttribute('aria-label','Open photo: '+item.alt);
      const image=make('img');image.src=safeUrl(item.thumbnail)||item.src;image.alt=item.alt||'GRIT FEST photo by '+item.credit;image.loading='lazy';image.decoding='async';image.width=item.width||1200;image.height=item.height||800;
      button.append(image);button.onclick=()=>openPhoto(items,item,g.name,button);figure.append(button);
-     const mobileImage=make('img','photo-mobile');mobileImage.src=safeUrl(item.thumbnail)||item.src;mobileImage.srcset=(safeUrl(item.thumbnail)||item.src)+' 640w, '+item.src+' '+(item.width||1800)+'w';mobileImage.sizes='100vw';mobileImage.alt=image.alt;mobileImage.width=image.width;mobileImage.height=image.height;mobileImage.loading='lazy';mobileImage.decoding='async';figure.append(mobileImage);
+     const mobileImage=make('img','photo-mobile');mobileImage.src=safeUrl(item.thumbnail)||item.src;mobileImage.srcset=(safeUrl(item.thumbnail)||item.src)+' 640w, '+item.src+' '+(item.width||1800)+'w';mobileImage.sizes='(max-width: 600px) 50vw, 100vw';mobileImage.alt='';mobileImage.width=image.width;mobileImage.height=image.height;mobileImage.loading='lazy';mobileImage.decoding='async';button.append(mobileImage);
     }
     if(g.community)cap.append(make('p','photo-credit',(item.type==='video'?'Video: ':'Photo: ')+(item.credit||g.name)));
     if(item.challenge){const challenge=make('p','manifest-label');challenge.append(make('span','','CHALLENGE'),document.createTextNode(item.challenge));cap.append(challenge)}
