@@ -9,7 +9,7 @@ const fail=(message,status=400)=>Object.assign(Error(message),{status});
 export function metadata(value){
  if(!value||typeof value!=='object')throw fail('Missing submission details.');
  const text=(key,max,required=false)=>{if(value[key]!=null&&typeof value[key]!=='string')throw fail('Check '+key+'.');const s=(value[key]||'').trim();if(s.length>max||(required&&!s))throw fail('Check '+key+'.');return s};
- const result={credit:text('credit',100,true),creditUrl:text('creditUrl',300),challenge:text('challenge',300,true),caption:text('caption',600),alt:text('alt',500,true),transcript:text('transcript',4000)};
+ const result={credit:text('credit',100),creditUrl:text('creditUrl',300),challenge:text('challenge',300),caption:text('caption',600),alt:text('alt',500,true),transcript:text('transcript',4000)};
  if(result.creditUrl){let u;try{u=new URL(result.creditUrl)}catch{throw fail('Invalid credit link.')}if(u.protocol!=='https:'||u.username||u.password)throw fail('Credit links must use HTTPS.');}
  if(value.consent!==true)throw fail('Permission to share is required.');
  return {...result,consent:true};

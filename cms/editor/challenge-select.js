@@ -2,7 +2,7 @@ import challenges from './manifest-challenges.json';
 
 // Names match the printed manifest. Its two multimodal entries need distinct values.
 export function populateChallenges(select, description, current = '') {
-  select.replaceChildren(new Option('Choose a challenge…', ''));
+  select.replaceChildren(new Option('No manifest item selected', ''));
   const tasks = new Map();
   for (const side of ['front', 'back']) {
     const group = document.createElement('optgroup');

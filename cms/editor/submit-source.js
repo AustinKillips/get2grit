@@ -8,23 +8,37 @@ async function photo(file){
  const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/webp',.84));if(!blob)throw Error('Couldn’t prepare this photo. Try a JPEG or PNG.');return new File([blob],'photo.webp',{type:'image/webp'});
 }
 form.addEventListener('submit',async e=>{
- e.preventDefault();if(!form.reportValidity())return;const button=form.querySelector('button');button.disabled=true;progress.hidden=false;progress.value=0;
+ e.preventDefault();if(!form.reportValidity())return;
+ const files=Array.from(form.media.files),data=Object.fromEntries(new FormData(form));delete data.media;data.consent=form.consent.checked;
+ const extensions={'image/webp':'webp','video/mp4':'mp4','video/webm':'webm','video/quicktime':'mov'};
+ // Validate the whole selection before sending anything.
+ for(const file of files){
+  if(!['image/jpeg','image/png',...Object.keys(extensions)].includes(file.type)){status.textContent=file.name+': unsupported file type.';return}
+  if(file.size>(file.type.startsWith('image/')?25:50)*1024*1024){status.textContent=file.name+': file is too large.';return}
+  if(file.type.startsWith('video/')&&!data.transcript.trim()){status.textContent='Please add a video description or transcript.';return}
+ }
+ const controls=[...form.elements];controls.forEach(el=>el.disabled=true);progress.hidden=false;progress.value=0;
+ let received=0;const delayed=[],failed=[];
  try{
-  const data=Object.fromEntries(new FormData(form));let file=form.media.files[0];const isImage=file.type.startsWith('image/');
-  if(file.size>(isImage?25:50)*1024*1024)throw Error('That file is too large. Choose a smaller file.');
-  status.textContent=isImage?'Preparing your photo…':'Preparing your video…';if(isImage)file=await photo(file);
-  const extensions={'image/webp':'webp','video/mp4':'mp4','video/webm':'webm','video/quicktime':'mov'};if(!extensions[file.type])throw Error('Please choose a supported photo or video.');
-  if(!isImage&&!data.transcript.trim())throw Error('Please add a video description or transcript.');
-  delete data.media;data.consent=form.consent.checked;data.mime=file.type;data.id=crypto.randomUUID();data.receipt=crypto.randomUUID();
-  status.textContent='Uploading privately…';await upload('incoming/'+data.id+'.'+extensions[file.type],file,{access:'private',handleUploadUrl:'/api/gallery/upload',clientPayload:JSON.stringify(data),multipart:file.size>5*1024*1024,onUploadProgress:e=>{progress.value=e.percentage}});
-  status.textContent='Upload complete. Confirming receipt…';
-  let received=false;
-  for(let attempt=0;attempt<20;attempt++){
-   const response=await fetch('/api/gallery/receipt?'+new URLSearchParams({id:data.id,receipt:data.receipt}));
-   if(response.ok&&(await response.json()).received){received=true;break}
-   await new Promise(resolve=>setTimeout(resolve,1500));
+  for(const [index,original] of files.entries()){
+   let uploaded=false;const item={...data,id:crypto.randomUUID(),receipt:crypto.randomUUID()};
+   try{
+    status.textContent='Preparing '+(index+1)+' of '+files.length+': '+original.name;
+    const file=original.type.startsWith('image/')?await photo(original):original;item.mime=file.type;
+    status.textContent='Uploading '+(index+1)+' of '+files.length+': '+original.name;
+    await upload('incoming/'+item.id+'.'+extensions[file.type],file,{access:'private',handleUploadUrl:'/api/gallery/upload',clientPayload:JSON.stringify(item),multipart:file.size>5*1024*1024,onUploadProgress:event=>{progress.value=(index+event.percentage/100)/files.length*100}});
+    uploaded=true;let confirmed=false;
+    status.textContent='Confirming '+(index+1)+' of '+files.length+'…';
+    for(let attempt=0;attempt<20;attempt++){
+     const response=await fetch('/api/gallery/receipt?'+new URLSearchParams({id:item.id,receipt:item.receipt}));
+     if(response.ok&&(await response.json()).received){confirmed=true;break}
+     await new Promise(resolve=>setTimeout(resolve,1500));
+    }
+    if(confirmed)received++;else delayed.push(original.name+' (reference '+item.id+')');
+   }catch(error){if(uploaded)delayed.push(original.name+' (reference '+item.id+')');else failed.push(original.name+': '+(error.message||'Upload failed'))}
+   progress.value=(index+1)/files.length*100;
   }
-  if(!received){status.textContent='Your file uploaded, but confirmation is delayed. Please do not upload it again yet. Reference: '+data.id;form.media.value='';return}
-  status.textContent='Upload received! It will appear only after our crew reviews it. You can send another below.';form.media.value='';progress.value=100;
- }catch(e){status.textContent=e.message||'Upload failed. Please try again.'}finally{button.disabled=false;}
+  status.textContent=received+' of '+files.length+' files received for review.'+(delayed.length?' Uploaded but confirmation is delayed; do not resend: '+delayed.join('; ')+'.':'')+(failed.length?' Please reselect only these failed files to retry: '+failed.join('; ')+'.':'');
+  form.media.value='';
+ }finally{controls.forEach(el=>el.disabled=false)}
 });
