@@ -8,6 +8,10 @@
   let frame;
   function sync() {
     const section = location.hash.slice(1);
+    if (section === 'photoupload') {
+      location.replace('https://get2grit-admin.vercel.app/submit.html');
+      return;
+    }
     frame?.contentWindow?.postMessage({channel, type:'sync', section:routes.has(section) ? section : null}, guideOrigin);
   }
   function findFrame() {
@@ -32,6 +36,7 @@
   window.addEventListener('hashchange', sync);
   window.addEventListener('popstate', sync);
   new MutationObserver(findFrame).observe(document.documentElement, {childList:true, subtree:true});
+  sync();
   findFrame();
 })();
 </script>
