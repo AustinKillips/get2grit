@@ -4,8 +4,26 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Grit Fest the movie</title>
-<meta http-equiv="refresh" content="0;url=https://www.youtube.com/watch?v=CFrjEBYh9-Y">
+<title>GRIT FEST — Article coming soon</title>
+<style>
+body{margin:0;min-height:100svh;display:grid;place-items:center;background:#f5c7de;color:#111;font-family:monospace}main{margin:24px;padding:32px;max-width:480px;border:2px solid #111;background:#fff}h1{font-size:clamp(28px,6vw,40px);line-height:1.1}p{font-size:18px;line-height:1.5}.label{display:inline-block;background:#fff020;padding:6px 10px;font-weight:bold}a{color:inherit}#article{display:inline-block;background:#fff020;padding:12px;border:2px solid #111}#article[hidden]{display:none}
+</style>
 </head>
-<body><p><a href="https://www.youtube.com/watch?v=CFrjEBYh9-Y">Watch Grit Fest the movie</a></p></body>
+<body>
+<main><span class="label">GRIT FEST</span><h1 id="title">Article coming soon</h1><p id="message">We're getting the story ready. Check back here soon!</p><a id="article" hidden>Read the article</a><p><a href="https://allbikeswelcome.org/grit-2026">Visit GRIT FEST</a></p></main>
+<script>
+// Keep this URL stable: existing printed QR codes point here.
+fetch('./destination.json', {cache:'no-store'})
+ .then(response => {if(!response.ok) throw new Error('Unavailable'); return response.json();})
+ .then(({url}) => {
+  if(typeof url !== 'string' || !url.trim()) return;
+  const destination = new URL(url);
+  if(destination.protocol !== 'https:' || destination.origin === location.origin && destination.pathname.replace(/\/$/,'') === location.pathname.replace(/\/$/,'')) return;
+  document.getElementById('title').textContent='Your GRIT FEST story';
+  document.getElementById('message').textContent='Opening the article… If it doesn’t open, use the link below.';
+  const link=document.getElementById('article');link.href=destination.href;link.hidden=false;
+  location.replace(destination.href);
+ }).catch(() => { /* Keep the coming-soon page available if configuration cannot load. */ });
+</script>
+</body>
 </html>
