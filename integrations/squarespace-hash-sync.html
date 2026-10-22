@@ -1,0 +1,37 @@
+<!-- Paste into the /grit-2026 page's Header Code Injection. Keep your existing iframe. -->
+<script>
+(() => {
+  if (!/^\/grit-2026\/?$/.test(location.pathname)) return;
+  const guideOrigin = 'https://get2grit.bike';
+  const channel = 'grit-guide-navigation-v1';
+  const routes = new Set(['schedule','photos','camping','group-rides','food','raffle','workshops','on-bike-clinics','scavenger-hunt','maps','supporters']);
+  let frame;
+  function sync() {
+    const section = location.hash.slice(1);
+    frame?.contentWindow?.postMessage({channel, type:'sync', section:routes.has(section) ? section : null}, guideOrigin);
+  }
+  function findFrame() {
+    const found = [...document.querySelectorAll('iframe')].find(el => {
+      try { return new URL(el.src, location.href).origin === guideOrigin; } catch { return false; }
+    });
+    if (!found || found === frame) return;
+    frame = found;
+    frame.addEventListener('load', sync);
+    sync();
+  }
+  window.addEventListener('message', event => {
+    if (event.origin !== guideOrigin || event.source !== frame?.contentWindow || event.data?.channel !== channel) return;
+    if (event.data.type === 'ready') { sync(); return; }
+    if (event.data.type !== 'section' || !routes.has(event.data.section)) return;
+    const hash = '#' + event.data.section;
+    if (location.hash !== hash) {
+      // The iframe already creates a history entry. Update its parent URL without adding another.
+      history.replaceState(history.state, '', location.pathname + location.search + hash);
+    }
+  });
+  window.addEventListener('hashchange', sync);
+  window.addEventListener('popstate', sync);
+  new MutationObserver(findFrame).observe(document.documentElement, {childList:true, subtree:true});
+  findFrame();
+})();
+</script>

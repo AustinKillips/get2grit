@@ -142,3 +142,26 @@ function render(){
 }
 document.querySelector('.skip').addEventListener('click',event=>{event.preventDefault();const main=document.querySelector('#content');main.focus();main.scrollIntoView({block:'start'});});
 window.addEventListener('hashchange',()=>{if(location.hash==='#content')return;document.querySelector('.event-nav')?.removeAttribute('open');render();document.querySelector('#content').focus({preventScroll:true})});render();
+
+// Synchronize section links with the approved Squarespace embedding page.
+if(window.parent!==window){
+ const embedChannel='grit-guide-navigation-v1';
+ const embedOrigins=new Set(['https://allbikeswelcome.org','https://www.allbikeswelcome.org']);
+ let embedOrigin;
+ const reportSection=()=>{
+  const section=location.hash.slice(1)||'schedule';
+  if(embedOrigin&&Object.hasOwn(pages,section))window.parent.postMessage({channel:embedChannel,type:'section',section},embedOrigin);
+ };
+ window.addEventListener('message',event=>{
+  if(event.source!==window.parent||!embedOrigins.has(event.origin)||event.data?.channel!==embedChannel||event.data.type!=='sync')return;
+  embedOrigin=event.origin;
+  const section=event.data.section;
+  if(typeof section==='string'&&Object.hasOwn(pages,section)&&location.hash!=='#'+section){
+   history.replaceState(history.state,'',location.pathname+location.search+'#'+section);
+   document.querySelector('.event-nav')?.removeAttribute('open');render();
+  }
+  reportSection();
+ });
+ window.addEventListener('hashchange',reportSection);
+ for(const origin of embedOrigins)window.parent.postMessage({channel:embedChannel,type:'ready'},origin);
+}
